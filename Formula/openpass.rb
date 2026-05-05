@@ -5,13 +5,13 @@
 class Openpass < Formula
   desc "Modern CLI password manager with age encryption"
   homepage "https://github.com/danieljustus/OpenPass"
-  version "2.1.0"
+  version "2.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danieljustus/OpenPass/releases/download/v2.1.0/OpenPass_2.1.0_darwin_amd64.tar.gz"
-      sha256 "95214596505361956d467481c25b7132e48e2a6eec7334cf523d7fea778f8884"
+      url "https://github.com/danieljustus/OpenPass/releases/download/v2.2.0/OpenPass_2.2.0_darwin_amd64.tar.gz"
+      sha256 "0b269953c07791a7d0499bfa78f8e9efec2e834102e39f3cfb4b2b019d10a6cc"
 
       define_method(:install) do
         bin.install "openpass"
@@ -20,8 +20,8 @@ class Openpass < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/OpenPass/releases/download/v2.1.0/OpenPass_2.1.0_darwin_arm64.tar.gz"
-      sha256 "a8a404e685f1a82285341a392575dc0962c76b6d3b716034141ac5f597a8f223"
+      url "https://github.com/danieljustus/OpenPass/releases/download/v2.2.0/OpenPass_2.2.0_darwin_arm64.tar.gz"
+      sha256 "23ef1b901902a51e7574f14248edc48a0ceddaffae5fda143a58949f2c547068"
 
       define_method(:install) do
         bin.install "openpass"
@@ -33,8 +33,8 @@ class Openpass < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/OpenPass/releases/download/v2.1.0/OpenPass_2.1.0_linux_amd64.tar.gz"
-      sha256 "f24d584a9a5d1f1cc6ad96156b05db0714bd8c1019de6a6ff0fc8da6c2435d65"
+      url "https://github.com/danieljustus/OpenPass/releases/download/v2.2.0/OpenPass_2.2.0_linux_amd64.tar.gz"
+      sha256 "81df9987bcd977f15f8cd528ebbceba059121c81bcda95459f31bc779ec822a8"
       define_method(:install) do
         bin.install "openpass"
         generate_completions_from_executable(bin/"openpass", "completion")
@@ -42,8 +42,8 @@ class Openpass < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/OpenPass/releases/download/v2.1.0/OpenPass_2.1.0_linux_arm64.tar.gz"
-      sha256 "1f20abd8fe9cef1b33d8986f64f56c942adb5b89faf324bf1997ad320ec3b8d3"
+      url "https://github.com/danieljustus/OpenPass/releases/download/v2.2.0/OpenPass_2.2.0_linux_arm64.tar.gz"
+      sha256 "ec7e0c3031aea19a9ad2a05cc148fda7821022f76659ed8366ec97cbdfd9782d"
       define_method(:install) do
         bin.install "openpass"
         generate_completions_from_executable(bin/"openpass", "completion")
