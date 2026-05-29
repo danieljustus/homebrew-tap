@@ -8,6 +8,8 @@ class Symvault < Formula
   version "0.2.1"
   license "MIT"
 
+  version_scheme 1
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/danieljustus/symaira-vault/releases/download/v0.2.1/symaira-vault_0.2.1_darwin_amd64.tar.gz"
@@ -15,6 +17,7 @@ class Symvault < Formula
 
       define_method(:install) do
         bin.install "symvault"
+        bin.install_symlink "symvault" => "openpass"
         generate_completions_from_executable(bin/"symvault", "completion")
         man1.install Dir["docs/man/*.1"]
       end
@@ -25,6 +28,7 @@ class Symvault < Formula
 
       define_method(:install) do
         bin.install "symvault"
+        bin.install_symlink "symvault" => "openpass"
         generate_completions_from_executable(bin/"symvault", "completion")
         man1.install Dir["docs/man/*.1"]
       end
@@ -37,6 +41,7 @@ class Symvault < Formula
       sha256 "0e8830a40c548cc995fc05134995492c832382eac65080a755ae315422451ab8"
       define_method(:install) do
         bin.install "symvault"
+        bin.install_symlink "symvault" => "openpass"
         generate_completions_from_executable(bin/"symvault", "completion")
         man1.install Dir["docs/man/*.1"]
       end
@@ -46,6 +51,7 @@ class Symvault < Formula
       sha256 "85d1e693fe1c195d162778ef22f0f69b330a1028aee32529d85e61c0931e89a1"
       define_method(:install) do
         bin.install "symvault"
+        bin.install_symlink "symvault" => "openpass"
         generate_completions_from_executable(bin/"symvault", "completion")
         man1.install Dir["docs/man/*.1"]
       end
@@ -64,11 +70,14 @@ class Symvault < Formula
       For MCP server setup:
         symvault mcp-config <name>
 
+      The legacy openpass command remains available as a compatibility alias.
+
       Documentation: https://github.com/danieljustus/symaira-vault#readme
     EOS
   end
 
   test do
     system "#{bin}/symvault", "version"
+    system "#{bin}/openpass", "version"
   end
 end
