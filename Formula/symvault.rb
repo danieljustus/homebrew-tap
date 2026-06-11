@@ -11,7 +11,7 @@ class Symvault < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/danieljustus/symaira-vault/releases/download/v0.4.1/symaira-vault_0.4.1_darwin_amd64.tar.gz"
-      sha256 "5b6b6e9472bc6b006436e8bfbb92ec883f99ba845695e8bb47454123e85ae071"
+      sha256 "7cfad383ac7612d4618bc7ee8615c5de6f9ab0216a7128c9d502faf047b78dfd"
 
       define_method(:install) do
         bin.install "symvault"
@@ -22,7 +22,7 @@ class Symvault < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/danieljustus/symaira-vault/releases/download/v0.4.1/symaira-vault_0.4.1_darwin_arm64.tar.gz"
-      sha256 "17dd47f114fbb0f807d5ce8a89f93d5a8637666c40d7776994011612a9c83fd3"
+      sha256 "2ea8412c9b4c2e8b418d4f070b592805b494ea833f41a8ea3bc79555ad46a917"
 
       define_method(:install) do
         bin.install "symvault"
@@ -36,7 +36,7 @@ class Symvault < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/danieljustus/symaira-vault/releases/download/v0.4.1/symaira-vault_0.4.1_linux_amd64.tar.gz"
-      sha256 "5ada5e68ca91a6e2ea00dd39b4cb8f6984a5d1943d42c4e5e330ee8182545327"
+      sha256 "d3c55ae984257287be8423b312df39af596fcac664b249c8f32b9bb86d2ea67b"
       define_method(:install) do
         bin.install "symvault"
         bin.install_symlink "symvault" => "openpass"
@@ -46,7 +46,7 @@ class Symvault < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/danieljustus/symaira-vault/releases/download/v0.4.1/symaira-vault_0.4.1_linux_arm64.tar.gz"
-      sha256 "daaeefca4fe70ace5fe5bcf30526902e6d21ba0f6192fe4f9577c58db9b4ada5"
+      sha256 "3181370fa7cc6a0012bc1312154922a9205549fa0c9f44c09703a9a34882c40f"
       define_method(:install) do
         bin.install "symvault"
         bin.install_symlink "symvault" => "openpass"
