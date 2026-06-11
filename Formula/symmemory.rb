@@ -11,7 +11,7 @@ class Symmemory < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/danieljustus/symaira-memory/releases/download/v0.2.2/symmemory_darwin_x86_64.tar.gz"
-      sha256 "bd522aff740f4b3fac26c79896f07e6222f698ebad0f3da81649e344ff48a9b4"
+      sha256 "c3ae1e4d2b6cdd2cbea393eba2d501d2461a546f7b578f33e90e4008cbf5bb10"
 
       define_method(:install) do
         bin.install "symmemory"
@@ -19,7 +19,7 @@ class Symmemory < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/danieljustus/symaira-memory/releases/download/v0.2.2/symmemory_darwin_arm64.tar.gz"
-      sha256 "d52adba24a72affec86ceb26738f5383e4f9f0e854a061a4ef16ec273e91c00f"
+      sha256 "c3fb0fd716ef32ded1b396411c91801976f194692132713a5fa010dc79f4ad58"
 
       define_method(:install) do
         bin.install "symmemory"
@@ -30,14 +30,14 @@ class Symmemory < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/danieljustus/symaira-memory/releases/download/v0.2.2/symmemory_linux_x86_64.tar.gz"
-      sha256 "e5dceb8d6168a653f779bad5ec88cc01f94080e9972314699c938709bfdb3630"
+      sha256 "255466b5c7cbdb2878849556d717f538f0ca8f64a5ffab01069353d542f04cf0"
       define_method(:install) do
         bin.install "symmemory"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/danieljustus/symaira-memory/releases/download/v0.2.2/symmemory_linux_arm64.tar.gz"
-      sha256 "7f2463fdb69a84919f9e364be48ea16a7281276b426bb46b34077214133ce983"
+      sha256 "7f618dd168e5cd953b958cd4d885ba4f33bda5fe84d56a21cb1adaedcbe2e870"
       define_method(:install) do
         bin.install "symmemory"
       end

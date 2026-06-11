@@ -11,7 +11,7 @@ class Symseek < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/danieljustus/symaira-seek/releases/download/v1.0.1/symaira-seek_1.0.1_darwin_amd64.tar.gz"
-      sha256 "1a370054d60e32c05ab5dcc909ab59548e908d6c344419cee8e1f5167ae942e8"
+      sha256 "67dd8cafb2a973fe67e7d8b0af0db5007390bb8c573cbc151fcb470e7e789fda"
 
       define_method(:install) do
         bin.install "seek" => "symseek"
@@ -19,7 +19,7 @@ class Symseek < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/danieljustus/symaira-seek/releases/download/v1.0.1/symaira-seek_1.0.1_darwin_arm64.tar.gz"
-      sha256 "d47ebb4ab48f80bb16a27f6c46ce02ffad45ac1dbb70baf4065a97cac95d65a8"
+      sha256 "ea48058bffb469c74497e9e52a4807d5a433c8045f49b7cd7c00a8492f084d7d"
 
       define_method(:install) do
         bin.install "seek" => "symseek"
@@ -30,14 +30,14 @@ class Symseek < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/danieljustus/symaira-seek/releases/download/v1.0.1/symaira-seek_1.0.1_linux_amd64.tar.gz"
-      sha256 "60b9dae0439b029d8a1e8ad0396e6690d731ac63c87007d369ab2dc00be340c5"
+      sha256 "e8d41c7f76a20552c4c07e675346a4509e7e6f343436beace2f01397bf824985"
       define_method(:install) do
         bin.install "seek" => "symseek"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/danieljustus/symaira-seek/releases/download/v1.0.1/symaira-seek_1.0.1_linux_arm64.tar.gz"
-      sha256 "5e428042048e1ab2a17be02d1c7c643eaafe4e9b2179b0277c0c51597b1f9a7f"
+      sha256 "39d208cca6b89000d802e343dad144d1dbcede1f802aca80ae9dd2fae0d31063"
       define_method(:install) do
         bin.install "seek" => "symseek"
       end
