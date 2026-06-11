@@ -1,6 +1,6 @@
 # Homebrew Tap
 
-Homebrew tap for Symaira and OpenPass.
+Homebrew tap for Symaira Tools
 
 ## Installation
 
