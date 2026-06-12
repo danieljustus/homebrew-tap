@@ -5,13 +5,13 @@
 class Symvault < Formula
   desc "Modern CLI password manager with age encryption"
   homepage "https://github.com/danieljustus/symaira-vault"
-  version "0.4.1"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.4.1/symaira-vault_0.4.1_darwin_amd64.tar.gz"
-      sha256 "7cfad383ac7612d4618bc7ee8615c5de6f9ab0216a7128c9d502faf047b78dfd"
+      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.5.0/symaira-vault_0.5.0_darwin_amd64.tar.gz"
+      sha256 "1b09991c7083c1c5d0c7df82751efce3524724b9b96000ab3f90103e6da27f21"
 
       define_method(:install) do
         bin.install "symvault"
@@ -21,8 +21,8 @@ class Symvault < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.4.1/symaira-vault_0.4.1_darwin_arm64.tar.gz"
-      sha256 "2ea8412c9b4c2e8b418d4f070b592805b494ea833f41a8ea3bc79555ad46a917"
+      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.5.0/symaira-vault_0.5.0_darwin_arm64.tar.gz"
+      sha256 "ee1c4d4aa8020f1c8da9b147ee4d77688c624dc6ccdb9ad9cbfcdc4d19246daf"
 
       define_method(:install) do
         bin.install "symvault"
@@ -35,8 +35,8 @@ class Symvault < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.4.1/symaira-vault_0.4.1_linux_amd64.tar.gz"
-      sha256 "d3c55ae984257287be8423b312df39af596fcac664b249c8f32b9bb86d2ea67b"
+      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.5.0/symaira-vault_0.5.0_linux_amd64.tar.gz"
+      sha256 "9153ed33edb682d5d46933586c8b2996fad8fa796e4089b8f4d36bf09a3dde02"
       define_method(:install) do
         bin.install "symvault"
         bin.install_symlink "symvault" => "openpass"
@@ -45,8 +45,8 @@ class Symvault < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.4.1/symaira-vault_0.4.1_linux_arm64.tar.gz"
-      sha256 "3181370fa7cc6a0012bc1312154922a9205549fa0c9f44c09703a9a34882c40f"
+      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.5.0/symaira-vault_0.5.0_linux_arm64.tar.gz"
+      sha256 "7626f8385d1ff5ec3dbc84ac71838f319e35893270e52461cd47622f67c5ca16"
       define_method(:install) do
         bin.install "symvault"
         bin.install_symlink "symvault" => "openpass"
