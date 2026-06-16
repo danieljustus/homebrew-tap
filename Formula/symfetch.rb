@@ -5,21 +5,21 @@
 class Symfetch < Formula
   desc "AI-native web fetch engine for LLM agents"
   homepage "https://github.com/danieljustus/symaira-fetch"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danieljustus/symaira-fetch/releases/download/v0.1.4/symaira-fetch_0.1.4_darwin_amd64.tar.gz"
-      sha256 "0358c58779b93787a89ca61697f447d7a08517a9ec02c9d487449d95656433e4"
+      url "https://github.com/danieljustus/symaira-fetch/releases/download/v0.1.5/symaira-fetch_0.1.5_darwin_amd64.tar.gz"
+      sha256 "db6579c456dc3ce2e6b4afe97afd29cec2dfe10139b17142a496ee443ee985de"
 
       define_method(:install) do
         bin.install "symfetch"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-fetch/releases/download/v0.1.4/symaira-fetch_0.1.4_darwin_arm64.tar.gz"
-      sha256 "4f91dbf900e6f905c42f99203ed0f5ceac171e50e3f43ee445c8e5a679f581f3"
+      url "https://github.com/danieljustus/symaira-fetch/releases/download/v0.1.5/symaira-fetch_0.1.5_darwin_arm64.tar.gz"
+      sha256 "93ce2335f782e03f1aaf45344286224a9e6f0ff3593d7eda6d96916857dffe44"
 
       define_method(:install) do
         bin.install "symfetch"
@@ -29,15 +29,15 @@ class Symfetch < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-fetch/releases/download/v0.1.4/symaira-fetch_0.1.4_linux_amd64.tar.gz"
-      sha256 "b36baa19d2407443c6a1d9d3af66dbca8a21305b7b6e5df355c429d323699b2d"
+      url "https://github.com/danieljustus/symaira-fetch/releases/download/v0.1.5/symaira-fetch_0.1.5_linux_amd64.tar.gz"
+      sha256 "6fd7c97d4fbf09a48286446b9fdc216e4da67ba090dc41975015e32be4ff162a"
       define_method(:install) do
         bin.install "symfetch"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-fetch/releases/download/v0.1.4/symaira-fetch_0.1.4_linux_arm64.tar.gz"
-      sha256 "ca58b6ebc0db01748efabb08d483837d3e509c04294bf827b5ce643dce684dfa"
+      url "https://github.com/danieljustus/symaira-fetch/releases/download/v0.1.5/symaira-fetch_0.1.5_linux_arm64.tar.gz"
+      sha256 "959d42e72d211e744810b57cb76df8b20a89dc939b0a9bd9ae7e12648b647ba0"
       define_method(:install) do
         bin.install "symfetch"
       end
