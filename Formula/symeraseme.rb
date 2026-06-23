@@ -134,8 +134,8 @@ class Symeraseme < Formula
   end
 
   resource "pydantic_core" do
-    url "https://files.pythonhosted.org/packages/9d/56/921726b776ace8d8f5db44c4ef961006580d91dc52b803c489fafd1aa249/pydantic_core-2.46.4.tar.gz"
-    sha256 "62f875393d7f270851f20523dd2e29f082bcc82292d66db2b64ea71f64b6e1c1"
+    url "https://files.pythonhosted.org/packages/a7/74/319859f70c733f341df03823c8ca27ce9003faaac3ffa3110f3af1c8641a/pydantic_core-2.47.0.tar.gz"
+    sha256 "422c1797a7864b2a9a996435aba92fe571fb80190f67a31edbc1ac040c7b51fe"
   end
 
   resource "Pygments" do
@@ -195,6 +195,30 @@ class Symeraseme < Formula
 
   def install
     virtualenv_install_with_resources
+
+    # macOS 27+ (Tahoe): source-built Rust extensions have mis-aligned LINKEDIT
+    # string pools that dlopen rejects. Replace pydantic_core and rpds .so files
+    # with pre-built wheels that have correct alignment.
+    if OS.mac? && MacOS.version >= "27"
+      site_packages = libexec/"lib/python3.12/site-packages"
+
+      # pydantic_core: download pre-built wheel and replace .so
+      resource("pydantic_core") do
+        url "https://files.pythonhosted.org/packages/6c/70/2989cb5112b892b7dc13af570ff57d0f383f770fc88bbb644262df1b3017/pydantic_core-2.47.0-cp312-cp312-macosx_11_0_arm64.whl"
+      end
+      resource("pydantic_core").stage do
+        cp "pydantic_core/_pydantic_core.cpython-312-darwin.so",
+           site_packages/"pydantic_core/_pydantic_core.cpython-312-darwin.so"
+      end
+
+      # Patch pydantic version check to accept pydantic_core 2.47.0
+      version_py = site_packages/"pydantic/version.py"
+      if version_py.exist?
+        inreplace version_py,
+          "_COMPATIBLE_PYDANTIC_CORE_VERSION = '2.46.4'",
+          "_COMPATIBLE_PYDANTIC_CORE_VERSION = '2.47.0'"
+      end
+    end
   end
 
   test do
