@@ -18,4 +18,5 @@ brew tap danieljustus/tap
 | `symmemory` | Formula | Persistent memory layer and semantic knowledge base | `brew install symmemory` |
 | `symseek` | Formula | Local-first, CGO-free document retrieval | `brew install symseek` |
 | `symeraseme` | Formula | Automated data broker removal tool | `brew install symeraseme` |
+| `symingest` | Formula | Document ingestion + OCR core | `brew install symingest` |
 | `symterminal` | Cask | Symaira Desktop terminal app | `brew install --cask symterminal` |
