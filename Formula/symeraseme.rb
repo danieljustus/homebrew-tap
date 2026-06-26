@@ -212,6 +212,16 @@ class Symeraseme < Formula
       cp buildpath/"pydantic_core/_pydantic_core.cpython-312-darwin.so",
          site_packages/"pydantic_core/_pydantic_core.cpython-312-darwin.so"
 
+      # rpds-py: download pre-built wheel and replace .so (same LINKEDIT fix)
+      rpds_wheel = buildpath/"rpds_py-2026.5.1-cp312-cp312-macosx_11_0_arm64.whl"
+      system "curl", "-fsSL", "-o", rpds_wheel.to_s,
+        "https://files.pythonhosted.org/packages/a3/43/35e3f136343aef451e545ce8c38d36c2f93c0ed88703db8b64ba2b205c68/rpds_py-2026.5.1-cp312-cp312-macosx_11_0_arm64.whl"
+      system "unzip", "-o", rpds_wheel.to_s,
+        "rpds/rpds.cpython-312-darwin.so",
+        "-d", buildpath.to_s
+      cp buildpath/"rpds/rpds.cpython-312-darwin.so",
+         site_packages/"rpds/rpds.cpython-312-darwin.so"
+
       # Patch pydantic version check to accept pydantic_core 2.47.0
       version_py = site_packages/"pydantic/version.py"
       if version_py.exist?
