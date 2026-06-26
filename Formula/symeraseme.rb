@@ -203,11 +203,9 @@ class Symeraseme < Formula
       site_packages = libexec/"lib/python3.12/site-packages"
 
       # pydantic_core: download pre-built wheel and replace .so
-      wheel_path = cached_download / "pydantic_core-2.47.0-cp312-cp312-macosx_11_0_arm64.whl"
-      unless wheel_path.exist?
-        curl_download "https://files.pythonhosted.org/packages/6c/70/2989cb5112b892b7dc13af570ff57d0f383f770fc88bbb644262df1b3017/pydantic_core-2.47.0-cp312-cp312-macosx_11_0_arm64.whl",
-          to: wheel_path
-      end
+      wheel_path = buildpath/"pydantic_core-2.47.0-cp312-cp312-macosx_11_0_arm64.whl"
+      system "curl", "-fsSL", "-o", wheel_path.to_s,
+        "https://files.pythonhosted.org/packages/6c/70/2989cb5112b892b7dc13af570ff57d0f383f770fc88bbb644262df1b3017/pydantic_core-2.47.0-cp312-cp312-macosx_11_0_arm64.whl"
       system "unzip", "-o", wheel_path.to_s,
         "pydantic_core/_pydantic_core.cpython-312-darwin.so",
         "-d", buildpath.to_s
