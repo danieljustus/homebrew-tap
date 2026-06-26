@@ -19,4 +19,5 @@ brew tap danieljustus/tap
 | `symseek` | Formula | Local-first, CGO-free document retrieval | `brew install symseek` |
 | `symeraseme` | Formula | Automated data broker removal tool | `brew install symeraseme` |
 | `symingest` | Formula | Document ingestion + OCR core | `brew install symingest` |
+| `symvibe` | Formula | Graphical Vibe-Coding Baukasten | `brew install symvibe` |
 | `symterminal` | Cask | Symaira Desktop terminal app | `brew install --cask symterminal` |
