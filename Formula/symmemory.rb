@@ -5,21 +5,21 @@
 class Symmemory < Formula
   desc "Persistent memory layer and semantic knowledge base for AI agents"
   homepage "https://github.com/danieljustus/symaira-memory"
-  version "0.7.1"
+  version "0.8.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danieljustus/symaira-memory/releases/download/v0.7.1/symmemory_darwin_x86_64.tar.gz"
-      sha256 "cb0fa8dfeb40564360b73bad88261b575623f45a2ad9983639d592187f62c244"
+      url "https://github.com/danieljustus/symaira-memory/releases/download/v0.8.0/symmemory_darwin_x86_64.tar.gz"
+      sha256 "3a880b5c1dc9ce8842f3ab4cf4a063d5ff6797bd034c670b3388fd0080cf6015"
 
       define_method(:install) do
         bin.install "symmemory"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-memory/releases/download/v0.7.1/symmemory_darwin_arm64.tar.gz"
-      sha256 "b8cb58941099cd5d74ce41b3d59454cb29a61f74ed38914ad7c579dc622e3350"
+      url "https://github.com/danieljustus/symaira-memory/releases/download/v0.8.0/symmemory_darwin_arm64.tar.gz"
+      sha256 "77313faada6ee2b5930198e09d72e7d2ee849f7ccf7d1877308f38c795d21579"
 
       define_method(:install) do
         bin.install "symmemory"
@@ -29,15 +29,15 @@ class Symmemory < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-memory/releases/download/v0.7.1/symmemory_linux_x86_64.tar.gz"
-      sha256 "f49dc2d241afb79aae234c09b8463210941cdb3be06804825d2a3ab94eef6c83"
+      url "https://github.com/danieljustus/symaira-memory/releases/download/v0.8.0/symmemory_linux_x86_64.tar.gz"
+      sha256 "7f252ef787d7bec2ead78ca4632ca5b3e9870d0b05e7fb373f64aa5e06e3ce49"
       define_method(:install) do
         bin.install "symmemory"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-memory/releases/download/v0.7.1/symmemory_linux_arm64.tar.gz"
-      sha256 "add5fd8130f97befe21e0d9276c0af1cfeeec86242b23a3875a9e4212d09406a"
+      url "https://github.com/danieljustus/symaira-memory/releases/download/v0.8.0/symmemory_linux_arm64.tar.gz"
+      sha256 "723549095e8a7ebbb55903d72b984084c29b642d334cf5b744b730c224943008"
       define_method(:install) do
         bin.install "symmemory"
       end
