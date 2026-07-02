@@ -5,21 +5,21 @@
 class Symfritz < Formula
   desc "CLI to administer, analyse, and control an AVM FRITZ!Box"
   homepage "https://github.com/danieljustus/symaira-fritz"
-  version "0.3.1"
+  version "0.3.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danieljustus/symaira-fritz/releases/download/v0.3.1/symaira-fritz_0.3.1_darwin_amd64.tar.gz"
-      sha256 "a5f42626b1466dcef9265c0d090ae14f958b60b89c4044be4483fc6482ef98f2"
+      url "https://github.com/danieljustus/symaira-fritz/releases/download/v0.3.2/symaira-fritz_0.3.2_darwin_amd64.tar.gz"
+      sha256 "a3e06241f9fd7488355732b0c07de0b64c9cf8a60e26d60e617d50eef01e1690"
 
       define_method(:install) do
         bin.install "symfritz"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-fritz/releases/download/v0.3.1/symaira-fritz_0.3.1_darwin_arm64.tar.gz"
-      sha256 "fe81d4070a9d2f62cbe18d9f24da9f091e0bc764aff64b4a242be5497e4098f7"
+      url "https://github.com/danieljustus/symaira-fritz/releases/download/v0.3.2/symaira-fritz_0.3.2_darwin_arm64.tar.gz"
+      sha256 "1b6d3a1398ab6e493e87d6c538c47eced548a4a73ac7b8b7757f123b27bff515"
 
       define_method(:install) do
         bin.install "symfritz"
@@ -29,15 +29,15 @@ class Symfritz < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-fritz/releases/download/v0.3.1/symaira-fritz_0.3.1_linux_amd64.tar.gz"
-      sha256 "7ff82608fc56be8425f111b77d551eff77966090f77ffa1c335390c2c5996a02"
+      url "https://github.com/danieljustus/symaira-fritz/releases/download/v0.3.2/symaira-fritz_0.3.2_linux_amd64.tar.gz"
+      sha256 "5f0ea31b64208b7ecff0344766e7d2785d0bd80358ec189026586171a6c4f99d"
       define_method(:install) do
         bin.install "symfritz"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-fritz/releases/download/v0.3.1/symaira-fritz_0.3.1_linux_arm64.tar.gz"
-      sha256 "b4157cd9e2040085144125912498de642257e79f0db20305c4a7e78a5894f61b"
+      url "https://github.com/danieljustus/symaira-fritz/releases/download/v0.3.2/symaira-fritz_0.3.2_linux_arm64.tar.gz"
+      sha256 "5aa11072cbee925cc0603f04b87f977d5dc05afbbeafa3851e968af5c1b552c7"
       define_method(:install) do
         bin.install "symfritz"
       end
