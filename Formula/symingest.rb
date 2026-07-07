@@ -11,7 +11,7 @@ class Symingest < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/danieljustus/symaira-ingest/releases/download/v0.7.0/symaira-ingest_0.7.0_darwin_amd64.tar.gz"
-      sha256 "df8aeb940b0c319f58e372f1d364245c80ceb8aae6d1389d50cfcaa7be44d986"
+      sha256 "77f64272787235717893de8bac228d63e4e808e5507e2b0a81a0ff601011f328"
 
       define_method(:install) do
         bin.install "symingest"
@@ -19,7 +19,7 @@ class Symingest < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/danieljustus/symaira-ingest/releases/download/v0.7.0/symaira-ingest_0.7.0_darwin_arm64.tar.gz"
-      sha256 "6b62470c7fa207ba4339223ce55567b2294028398c063668eb5d81e73b4a201f"
+      sha256 "f44398a77746931fea556b84f7061d8aca13c4a50ef74deed489e1af61da95ff"
 
       define_method(:install) do
         bin.install "symingest"
@@ -30,14 +30,14 @@ class Symingest < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/danieljustus/symaira-ingest/releases/download/v0.7.0/symaira-ingest_0.7.0_linux_amd64.tar.gz"
-      sha256 "e987b3f7d573eb3695d79edfc4103740bbe691055220530f52b98c62f320d4bb"
+      sha256 "658bbe10b3ef773ff3c07e05e5af1efd656606bc55ad268e7b4647364e3d3254"
       define_method(:install) do
         bin.install "symingest"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/danieljustus/symaira-ingest/releases/download/v0.7.0/symaira-ingest_0.7.0_linux_arm64.tar.gz"
-      sha256 "9e2e114dd5429856a2c4ac88c15ab958efebeb8c6f05987b7b233f3866d14221"
+      sha256 "dd2c2da07d49ae4aae146edab34008ce9a11e55f7ec99ef231803a47c1afd505"
       define_method(:install) do
         bin.install "symingest"
       end
