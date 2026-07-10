@@ -1,6 +1,6 @@
 cask "symterminal" do
-  version "0.8.1"
-  sha256 "39d759292bbb7d435cd4435371bf8a3e2753c463b54ac9f7f8552c35a4c08b62"
+  version "0.8.2"
+  sha256 "285e0a70c000332aa3d0fea8a44d2365b605b5cb3373468653b805acbc393250"
 
   url "https://github.com/danieljustus/symaira-terminal/releases/download/v#{version}/SymairaTerminal-#{version}.dmg"
   name "Symaira Terminal"
