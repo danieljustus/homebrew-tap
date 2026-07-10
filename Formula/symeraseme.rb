@@ -6,8 +6,8 @@ class Symeraseme < Formula
 
   desc "Automated data broker removal tool — close your accounts, erase your data"
   homepage "https://github.com/danieljustus/symaira-eraseme"
-  url "https://files.pythonhosted.org/packages/f2/ed/f4088e190eee0633d219f392fa8ecca968bf84e2583da2610392a71ebd71/symeraseme-0.6.2.tar.gz"
-  sha256 "795445b41ca135abaa86ea0d03c12a4f4ecb078760471127650f73520c942357"
+  url "https://files.pythonhosted.org/packages/d5/df/09bfb835d815561155686e5290dd5ce208501064bdaffb176df92badcdad/symeraseme-0.8.0.tar.gz"
+  sha256 "770f15823592bdd359dabeb75327ebfe8d996eae72d7fb192ccbd78bb3597b4d"
   license "MIT"
 
   depends_on "rust" => :build
