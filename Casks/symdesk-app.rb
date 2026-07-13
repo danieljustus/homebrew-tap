@@ -1,6 +1,6 @@
 cask "symdesk-app" do
-  version "0.6.9"
-  sha256 "0e9bd15fedb8ebda676f98d1bf1e234f21dd93d3a0f00ecb8e9227fb2a8299e4"
+  version "0.6.10"
+  sha256 "3de94c14a258ce335d95bfe2b606c6a6bd4b1ca67cd12171dbd2696f75d7130f"
 
   url "https://github.com/danieljustus/symaira-desktop/releases/download/v#{version}/SymDesk-#{version}.dmg"
   name "SymDesk"
