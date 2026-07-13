@@ -1,25 +1,20 @@
 cask "symtune" do
-  version "0.1.3"
-  sha256 "95f9f874471c76650ad27fbb08bab260ed26cb93d9e7963fbb62b357b6726f23"
+  version "0.2.0"
+  sha256 "0fda7a4b730956836154634ae555044aae1c3d5f4ae05b5a310e89ed18d11a77"
 
   url "https://github.com/danieljustus/symaira-tune/releases/download/v#{version}/symtune-#{version}.dmg"
-  name "Symtune"
-  desc "Native macOS hardware tuning CLI and MCP server — brightness, fans, battery"
+  name "Symaira Tune"
+  desc "Native macOS menu-bar controls for thermals, brightness, and power"
   homepage "https://github.com/danieljustus/symaira-tune"
 
-  livecheck do
-    url "https://github.com/danieljustus/symaira-tune/releases/latest"
-    strategy :header_match
-    regex(/symtune-(\d+(?:\.\d+)*)\.dmg/i)
-  end
+  depends_on macos: :sonoma
 
-  depends_on macos: :sequoia
-
+  app "SymairaTune.app"
   binary "symtune"
 
   zap trash: [
-    "~/Library/Application Support/symtune",
-    "~/Library/Preferences/com.symaira.tune.plist",
-    "~/Library/Caches/com.symaira.tune",
+    "~/.config/symtune",
+    "~/.cache/symtune",
+    "~/.local/share/symtune",
   ]
 end
