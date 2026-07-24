@@ -11,7 +11,7 @@ class Symdesk < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/danieljustus/symaira-desktop/releases/download/v0.7.0/symaira-desktop_0.7.0_darwin_amd64.tar.gz"
-      sha256 "08bc2102978d6143cbd5a7562fd4dfa55406e9d7bc8c6c8e4defee75d15e2d45"
+      sha256 "d46af9f2dd2501b9f10480beaa75cd79e679445357fc1e31632701fb349da227"
 
       define_method(:install) do
         bin.install "symdesk"
@@ -19,7 +19,7 @@ class Symdesk < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/danieljustus/symaira-desktop/releases/download/v0.7.0/symaira-desktop_0.7.0_darwin_arm64.tar.gz"
-      sha256 "89b03ca5ae2c262a9c968fd30bc9d0457f2d4ddc8b3ccff97c7e556bc8acf15f"
+      sha256 "68805395e8cf212cb7ff215866df3efe61f207aa0107f40d549a46a29eb948b2"
 
       define_method(:install) do
         bin.install "symdesk"
@@ -30,14 +30,14 @@ class Symdesk < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/danieljustus/symaira-desktop/releases/download/v0.7.0/symaira-desktop_0.7.0_linux_amd64.tar.gz"
-      sha256 "dd9770f7f9ffb64fe502c0c26e3022f6d061c717cb517ca348218055446175b2"
+      sha256 "df1fa1ece0de1a09ebf9c9b63815e7fee07144d77d9e207785e1ecfda3d5e81b"
       define_method(:install) do
         bin.install "symdesk"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/danieljustus/symaira-desktop/releases/download/v0.7.0/symaira-desktop_0.7.0_linux_arm64.tar.gz"
-      sha256 "2e5e2b8a27407ccd4405080446ac0c5489e6cd81062a72abbd18574907fa403c"
+      sha256 "eebc1805571a370f4a8b33da7603228fff8b8c6a5cc48f7a2c69d5cfd7ceca17"
       define_method(:install) do
         bin.install "symdesk"
       end
