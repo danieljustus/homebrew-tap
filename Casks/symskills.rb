@@ -1,6 +1,6 @@
 cask "symskills" do
-  version "0.1.7"
-  sha256 "06a4dd35dc2696d6a72f9a522ce21c3aafbbdfec26101ab4b60cc1c14f9633af"
+  version "0.1.8"
+  sha256 "d38b466db04bae4dfcb06e0136fcde1a07d5ab5e09ffa1bca51443bdc4853166"
 
   url "https://github.com/danieljustus/symaira-skills/releases/download/v#{version}/Symskills.dmg"
   name "Symskills"
