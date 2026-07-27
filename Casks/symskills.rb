@@ -1,0 +1,25 @@
+cask "symskills" do
+  version "0.1.7"
+  sha256 "7ebfd9a6ec3efb1fff640a3255ee65d177da8d372e7b36680ff14bf18845e294"
+
+  url "https://github.com/danieljustus/symaira-skills/releases/download/v#{version}/Symskills.dmg"
+  name "Symskills"
+  desc "Portable Skill SSOT manager for local AI agent harnesses"
+  homepage "https://github.com/danieljustus/symaira-skills"
+
+  livecheck do
+    url "https://github.com/danieljustus/symaira-skills/releases/latest"
+    strategy :header_match
+    regex(/Symskills\.dmg/i)
+  end
+
+  depends_on macos: :sonoma
+
+  app "Symskills.app"
+
+  zap trash: [
+    "~/Library/Application Support/dev.symaira.Symskills",
+    "~/Library/Preferences/dev.symaira.Symskills.plist",
+    "~/Library/Caches/dev.symaira.Symskills",
+  ]
+end
