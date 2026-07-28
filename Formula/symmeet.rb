@@ -4,9 +4,9 @@
 class Symmeet < Formula
   desc "Local-first, standalone meeting-artifact tool"
   homepage "https://github.com/danieljustus/symaira-meet"
-  url "https://github.com/danieljustus/symaira-meet/releases/download/v0.1.0/symmeet_v0.1.0_darwin_arm64.tar.gz"
-  version "0.1.0"
-  sha256 "a1aa86f5a5f4c2f288bf2909f68268e998b53b0be28c394398bdea02f20a59e3"
+  url "https://github.com/danieljustus/symaira-meet/releases/download/v0.2.0/symmeet_v0.2.0_darwin_arm64.tar.gz"
+  version "0.2.0"
+  sha256 "e8a73fd0b6499f93373cf35a60bd9d3c05b9d39472757dd84f6a7d5b028f6afd"
   license "Apache-2.0"
 
   depends_on macos: :sequoia

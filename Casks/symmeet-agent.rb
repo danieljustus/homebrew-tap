@@ -1,8 +1,8 @@
 cask "symmeet-agent" do
-  version "0.1.0"
-  sha256 "a5cd065a740e42332bfd1573ad366acbd71d5f64b382de99834d8c53115cc73e"
+  version "0.2.0"
+  sha256 "442fef8a3c3a51b206a1915d297af6ce25f8cc3f0512ae24f3bc4036d5c5ab8f"
 
-  url "https://github.com/danieljustus/symaira-meet/releases/download/v#{version}/SymMeetAgent_v#{version}.dmg"
+  url "https://github.com/danieljustus/symaira-meet/releases/download/v0.2.0/SymMeetAgent_v0.2.0.dmg"
   name "SymMeetAgent"
   desc "Consent-first local meeting recording agent"
   homepage "https://github.com/danieljustus/symaira-meet"
