@@ -5,21 +5,21 @@
 class Symingest < Formula
   desc "Document ingestion + OCR pipeline for the Symaira ecosystem"
   homepage "https://github.com/danieljustus/symaira-ingest"
-  version "0.9.0"
+  version "0.10.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danieljustus/symaira-ingest/releases/download/v0.9.0/symaira-ingest_0.9.0_darwin_amd64.tar.gz"
-      sha256 "d16dc9c76c9b78f937dd39c2783d5204cfb16ebe7120d3d89e74ff32751a7458"
+      url "https://github.com/danieljustus/symaira-ingest/releases/download/v0.10.0/symaira-ingest_0.10.0_darwin_amd64.tar.gz"
+      sha256 "1a8482804fedbf2111f21f88c567ac5f12755ed8b1b641b647554a2adafed071"
 
       define_method(:install) do
         bin.install "symingest"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-ingest/releases/download/v0.9.0/symaira-ingest_0.9.0_darwin_arm64.tar.gz"
-      sha256 "9e91e8e3b00a0a74c7ac44413748c2e281756e330dba29bb956ead4a7bd6912d"
+      url "https://github.com/danieljustus/symaira-ingest/releases/download/v0.10.0/symaira-ingest_0.10.0_darwin_arm64.tar.gz"
+      sha256 "28326fb95988132efd0000e7fd5fe8b7d6827db4948fbd7cd0ae52829bd35dd8"
 
       define_method(:install) do
         bin.install "symingest"
@@ -29,15 +29,15 @@ class Symingest < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-ingest/releases/download/v0.9.0/symaira-ingest_0.9.0_linux_amd64.tar.gz"
-      sha256 "5b4f2591867248b8adfb4acab6893a369782ca4b63ffb64bb0bfb6bb84fe0f75"
+      url "https://github.com/danieljustus/symaira-ingest/releases/download/v0.10.0/symaira-ingest_0.10.0_linux_amd64.tar.gz"
+      sha256 "5d7c592b66c63e554ce010cffb459e5b0482a87ad808ad5e7ca8861b1d0fdd4f"
       define_method(:install) do
         bin.install "symingest"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-ingest/releases/download/v0.9.0/symaira-ingest_0.9.0_linux_arm64.tar.gz"
-      sha256 "b7a8bd1eb7244ed640259838a21913c30e08d793a472f0a412f5e43407896cf1"
+      url "https://github.com/danieljustus/symaira-ingest/releases/download/v0.10.0/symaira-ingest_0.10.0_linux_arm64.tar.gz"
+      sha256 "adc8d9d8702645ecd5604acfe77930a8b1e9a63838bf91973957c33d23a85cfd"
       define_method(:install) do
         bin.install "symingest"
       end
