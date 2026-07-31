@@ -5,21 +5,21 @@
 class Symguard < Formula
   desc "Local-first security gateway for AI agents and MCP servers"
   homepage "https://github.com/danieljustus/symaira-guard"
-  version "0.2.0"
+  version "0.2.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danieljustus/symaira-guard/releases/download/v0.2.0/symaira-guard_0.2.0_darwin_amd64.tar.gz"
-      sha256 "c2415c92de53f054a92d12febeac662052f21e36bcc14c914fc5954503da197d"
+      url "https://github.com/danieljustus/symaira-guard/releases/download/v0.2.1/symaira-guard_0.2.1_darwin_amd64.tar.gz"
+      sha256 "9283b3cdb4547c3e98561887fad3693a44b3aaf4e79c3a946b447328ee0d4726"
 
       define_method(:install) do
         bin.install "symguard"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-guard/releases/download/v0.2.0/symaira-guard_0.2.0_darwin_arm64.tar.gz"
-      sha256 "dd19b42b7b529551b6abaab8ce172e4cedc0afe791646be1b069b1dfa13ddcf9"
+      url "https://github.com/danieljustus/symaira-guard/releases/download/v0.2.1/symaira-guard_0.2.1_darwin_arm64.tar.gz"
+      sha256 "f1429df7d4af5807a2c77a27ec3a939c4b29a71e345ef019fe32a0abcaddd6f6"
 
       define_method(:install) do
         bin.install "symguard"
@@ -29,15 +29,15 @@ class Symguard < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-guard/releases/download/v0.2.0/symaira-guard_0.2.0_linux_amd64.tar.gz"
-      sha256 "8dbbe93e96242968a43bf89f48bd551a7306b43473cda9fdb4938a8c46bc497f"
+      url "https://github.com/danieljustus/symaira-guard/releases/download/v0.2.1/symaira-guard_0.2.1_linux_amd64.tar.gz"
+      sha256 "bf1376abe777932bf9ebdcd4c6b35a6e98d5f82eb1022a41f3fec92b5d8c8a04"
       define_method(:install) do
         bin.install "symguard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-guard/releases/download/v0.2.0/symaira-guard_0.2.0_linux_arm64.tar.gz"
-      sha256 "cc8b55a2a7180a485255c904b8cf02b8e3fe2213973ab2b5517e1eb5d95f7b21"
+      url "https://github.com/danieljustus/symaira-guard/releases/download/v0.2.1/symaira-guard_0.2.1_linux_arm64.tar.gz"
+      sha256 "3b69565338cb5509e7d4408c8627a279d9536bf286d98a5719337286d1b5a2a4"
       define_method(:install) do
         bin.install "symguard"
       end
