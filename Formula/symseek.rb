@@ -5,21 +5,21 @@
 class Symseek < Formula
   desc "Local-first, CGO-free document retrieval for AI agents"
   homepage "https://github.com/danieljustus/symaira-seek"
-  version "2.3.5"
+  version "2.3.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danieljustus/symaira-seek/releases/download/v2.3.5/symaira-seek_2.3.5_darwin_amd64.tar.gz"
-      sha256 "50ebc5586e9fb7d620fd5c13520494a4d78f976d8e1928e65621d2828d196596"
+      url "https://github.com/danieljustus/symaira-seek/releases/download/v2.3.6/symaira-seek_2.3.6_darwin_amd64.tar.gz"
+      sha256 "d78fa24bef59d74a1befa22d0a833b3d31e51cc0c7fdac071d9a6efe9818e016"
 
       define_method(:install) do
         bin.install "symseek"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-seek/releases/download/v2.3.5/symaira-seek_2.3.5_darwin_arm64.tar.gz"
-      sha256 "a12a126b5b63ebcfaab4fc83d18c818341a295b4f6ce36036fd1bd0f00b5b412"
+      url "https://github.com/danieljustus/symaira-seek/releases/download/v2.3.6/symaira-seek_2.3.6_darwin_arm64.tar.gz"
+      sha256 "215d501e3444868bf021a09c528ed8ff1a8fbeedc345ba2ec3978943a7d323ac"
 
       define_method(:install) do
         bin.install "symseek"
@@ -29,15 +29,15 @@ class Symseek < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-seek/releases/download/v2.3.5/symaira-seek_2.3.5_linux_amd64.tar.gz"
-      sha256 "b32adb4e66c4e0e9a46f912f24e54af1842cb5b2105b2799ec696461a8715092"
+      url "https://github.com/danieljustus/symaira-seek/releases/download/v2.3.6/symaira-seek_2.3.6_linux_amd64.tar.gz"
+      sha256 "4e4f67ca7a28ddae1c779b9eb595a7511d0c6270c325203371b3d74fa7369460"
       define_method(:install) do
         bin.install "symseek"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-seek/releases/download/v2.3.5/symaira-seek_2.3.5_linux_arm64.tar.gz"
-      sha256 "df805952465d89d8f8640028bda74a27ed46a38999d4d584bcdbc0306c72f29f"
+      url "https://github.com/danieljustus/symaira-seek/releases/download/v2.3.6/symaira-seek_2.3.6_linux_arm64.tar.gz"
+      sha256 "0adf6805df8f929c463fa6c28b3983fb1c00997a8c77472f115f53e7759c3371"
       define_method(:install) do
         bin.install "symseek"
       end
