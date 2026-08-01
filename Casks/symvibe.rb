@@ -1,6 +1,6 @@
 cask "symvibe" do
-  version "0.8.0"
-  sha256 "f28f1b26f03a70ec116060eb4be8e8694ed358ce8daa7edd9c310fccb56aa361"
+  version "0.10.3"
+  sha256 "f4ac096a23bced5ecaacd54f23e92c26f4a14974a34c62e58a871d5ff576eaf4"
 
   url "https://github.com/danieljustus/symaira-vibecoder/releases/download/v#{version}/Symvibe-#{version}.dmg"
   name "Symaira VibeCoder"
@@ -10,7 +10,7 @@ cask "symvibe" do
   livecheck do
     url "https://github.com/danieljustus/symaira-vibecoder/releases/latest"
     strategy :header_match
-    regex(/Symvibe-(\\d+(?:\.\\d+)*)\.dmg/i)
+    regex(/Symvibe-(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   depends_on macos: :sonoma
