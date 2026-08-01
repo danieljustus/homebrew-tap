@@ -1,6 +1,6 @@
 cask "symvibe" do
-  version "0.10.3"
-  sha256 "f4ac096a23bced5ecaacd54f23e92c26f4a14974a34c62e58a871d5ff576eaf4"
+  version "0.10.5"
+  sha256 "2fc140e408fe62373b890d82a5e1793253cbc4f6b4e0ec5cf577f7f0b74d6827"
 
   url "https://github.com/danieljustus/symaira-vibecoder/releases/download/v#{version}/Symvibe-#{version}.dmg"
   name "Symaira VibeCoder"
