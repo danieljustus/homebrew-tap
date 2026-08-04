@@ -6,8 +6,8 @@ class Symeraseme < Formula
 
   desc "Automated data broker removal tool — close your accounts, erase your data"
   homepage "https://github.com/danieljustus/symaira-eraseme"
-  url "https://files.pythonhosted.org/packages/d5/df/09bfb835d815561155686e5290dd5ce208501064bdaffb176df92badcdad/symeraseme-0.8.0.tar.gz"
-  sha256 "770f15823592bdd359dabeb75327ebfe8d996eae72d7fb192ccbd78bb3597b4d"
+  url "https://files.pythonhosted.org/packages/7c/1b/27904034b2fa8388c4b0c0c775da7cb7c7a5cfc241372599c1214279b182/symeraseme-0.10.0.tar.gz"
+  sha256 "d59bb93b66007cb7be26f4befd4b22957b5d456b3c06bbac2fdeb9818ab3def6"
   license "MIT"
 
   depends_on "rust" => :build
@@ -68,17 +68,17 @@ class Symeraseme < Formula
     sha256 "a4f57ab599e6a2e3016d7595cfd72eb4661a5106e787a95bcc90c7105b831efc"
   end
 
-  resource "jaraco.classes" do
+  resource "jaraco-classes" do
     url "https://files.pythonhosted.org/packages/06/c0/ed4a27bc5571b99e3cff68f8a9fa5b56ff7df1c2251cc715a652ddd26402/jaraco.classes-3.4.0.tar.gz"
     sha256 "47a024b51d0239c0dd8c8540c6c7f484be3b8fcf0b2d85c13825780d3b3f3acd"
   end
 
-  resource "jaraco.context" do
+  resource "jaraco-context" do
     url "https://files.pythonhosted.org/packages/af/50/4763cd07e722bb6285316d390a164bc7e479db9d90daa769f22578f698b4/jaraco_context-6.1.2.tar.gz"
     sha256 "f1a6c9d391e661cc5b8d39861ff077a7dc24dc23833ccee564b234b81c82dfe3"
   end
 
-  resource "jaraco.functools" do
+  resource "jaraco-functools" do
     url "https://files.pythonhosted.org/packages/36/cf/ea4ef2920830dea3f5ab2ea4da6fb67724e6dca80ee2553788c3607243d0/jaraco_functools-4.5.0.tar.gz"
     sha256 "3bb5665ea4a020cf78a7040e89154c77edadb3ca74f366479669c5999aa70b03"
   end
@@ -133,7 +133,7 @@ class Symeraseme < Formula
     sha256 "c40756b57adaa8b1efeeced5c196f3f3b7c435f90e84ea7f443901bec8099ef6"
   end
 
-  resource "pydantic_core" do
+  resource "pydantic-core" do
     url "https://files.pythonhosted.org/packages/a7/74/319859f70c733f341df03823c8ca27ce9003faaac3ffa3110f3af1c8641a/pydantic_core-2.47.0.tar.gz"
     sha256 "422c1797a7864b2a9a996435aba92fe571fb80190f67a31edbc1ac040c7b51fe"
   end
