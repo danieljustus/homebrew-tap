@@ -5,21 +5,21 @@
 class Symscope < Formula
   desc "Cross-platform port inventory and MCP discovery tool for AI agents"
   homepage "https://github.com/danieljustus/symaira-scope"
-  version "0.3.2"
+  version "0.4.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danieljustus/symaira-scope/releases/download/v0.3.2/symaira-scope_0.3.2_darwin_amd64.tar.gz"
-      sha256 "aabc628098f54f54e0d583099d7ae5771cd727fda66231b8f221cc2854bb5137"
+      url "https://github.com/danieljustus/symaira-scope/releases/download/v0.4.0/symaira-scope_0.4.0_darwin_amd64.tar.gz"
+      sha256 "d0f3b3da8097ed5b9a646ede12a45c9ccd1ce373edc2a358c93432d0bdfcc333"
 
       define_method(:install) do
         bin.install "symscope"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-scope/releases/download/v0.3.2/symaira-scope_0.3.2_darwin_arm64.tar.gz"
-      sha256 "0f7f01210807adb41494001a00e5a4874c859000edf6bdf0def63a9f2308d816"
+      url "https://github.com/danieljustus/symaira-scope/releases/download/v0.4.0/symaira-scope_0.4.0_darwin_arm64.tar.gz"
+      sha256 "27ff4d35bc20bf71427819e8fe0efed1ca11d26912ece403b7711e75409cd092"
 
       define_method(:install) do
         bin.install "symscope"
@@ -29,15 +29,15 @@ class Symscope < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-scope/releases/download/v0.3.2/symaira-scope_0.3.2_linux_amd64.tar.gz"
-      sha256 "968cd76f2191f687b0d11c7c357deade8828b9613c8c66c30a544157a43b2323"
+      url "https://github.com/danieljustus/symaira-scope/releases/download/v0.4.0/symaira-scope_0.4.0_linux_amd64.tar.gz"
+      sha256 "adc6a522eabfddbdda5f7624d1caa84403ee0592f2b6b599975c05f3eac89657"
       define_method(:install) do
         bin.install "symscope"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-scope/releases/download/v0.3.2/symaira-scope_0.3.2_linux_arm64.tar.gz"
-      sha256 "f159c091ac60deaa6f02dd7c12ed6d437577506d3037e56d27c41bd8332807ea"
+      url "https://github.com/danieljustus/symaira-scope/releases/download/v0.4.0/symaira-scope_0.4.0_linux_arm64.tar.gz"
+      sha256 "23b85f92b5ed6d31bdcd868f7c12431abeed97617892010dbe369b22750f1921"
       define_method(:install) do
         bin.install "symscope"
       end
