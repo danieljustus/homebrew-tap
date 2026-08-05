@@ -1,6 +1,6 @@
 cask "symingest" do
-  version "0.10.4"
-  sha256 "1329b90ccbc3e1a8c98548e6fae91c4ef4348b49a3133c7a9398e8f187aaf896"
+  version "0.10.5"
+  sha256 "9ad106c1fa987dbf8feceaef3e02b4a92307e7f387b88f50c40ed0370454058a"
 
   url "https://github.com/danieljustus/symaira-ingest/releases/download/v#{version}/Symingest.dmg",
       verified: "github.com/danieljustus/symaira-ingest/"
