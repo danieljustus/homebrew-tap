@@ -1,10 +1,10 @@
 cask "symoperate" do
-  version "0.2.4"
-  sha256 "1751e97731d3b762d2ba412b4de2753f2f4e287df5ff3f4e95b60ba7def4efd8"
+  version "0.5.0"
+  sha256 "9a2f229d260c27fd63a906956eb0ec36553c4a9e2a22fa6a6cd32c8d5436abfd"
 
   url "https://github.com/danieljustus/symaira-operate/releases/download/v#{version}/symoperate.dmg"
   name "Symoperate"
-  desc "Native desktop-automation MCP server"
+  desc "Native macOS desktop-automation MCP server"
   homepage "https://github.com/danieljustus/symaira-operate"
 
   depends_on macos: :sequoia
@@ -13,7 +13,7 @@ cask "symoperate" do
 
   zap trash: [
     "~/Library/Application Support/symoperate",
-    "~/Library/Caches/com.symaira.operate",
     "~/Library/Preferences/com.symaira.operate.plist",
+    "~/Library/Caches/com.symaira.operate",
   ]
 end
