@@ -5,23 +5,23 @@
 class Symprint < Formula
   desc "Markdown → beautiful PDF via named use-case profiles (Typst engine)"
   homepage "https://github.com/danieljustus/symaira-print"
-  version "0.3.0"
+  version "0.4.0"
   license "Apache-2.0"
 
   depends_on "typst"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danieljustus/symaira-print/releases/download/v0.3.0/symaira-print_0.3.0_darwin_amd64.tar.gz"
-      sha256 "1c477d8d8d698f07d880e616323fd5e7a1a76e13c3d1c2ebf5f4f39ad0a639fa"
+      url "https://github.com/danieljustus/symaira-print/releases/download/v0.4.0/symaira-print_0.4.0_darwin_amd64.tar.gz"
+      sha256 "643c5fb36fbeb35eaa54bf6bbbc12ddde91a196c12a7b706459001389342fba5"
 
       define_method(:install) do
         bin.install "symprint"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-print/releases/download/v0.3.0/symaira-print_0.3.0_darwin_arm64.tar.gz"
-      sha256 "d3bd02446968b6b0b3bd45059cb36cf18f00e1cd26434fb30fcd44b367d1e167"
+      url "https://github.com/danieljustus/symaira-print/releases/download/v0.4.0/symaira-print_0.4.0_darwin_arm64.tar.gz"
+      sha256 "735f20370e8746f1d5e6afe440ac8e07bd2bf164b19b815bf228ed2c53e3f755"
 
       define_method(:install) do
         bin.install "symprint"
@@ -31,15 +31,15 @@ class Symprint < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-print/releases/download/v0.3.0/symaira-print_0.3.0_linux_amd64.tar.gz"
-      sha256 "a6742b8cc2b633faeef23a2057af2d515352684e5e1997d943df0e017ec94422"
+      url "https://github.com/danieljustus/symaira-print/releases/download/v0.4.0/symaira-print_0.4.0_linux_amd64.tar.gz"
+      sha256 "c4f3984ebdbddc9281b62814963286b08888755b016a4b4a38cadcf384b1844d"
       define_method(:install) do
         bin.install "symprint"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-print/releases/download/v0.3.0/symaira-print_0.3.0_linux_arm64.tar.gz"
-      sha256 "5c48286ac75c129659dfe5bf4ef5c64c48729098ddc795d624ab0f6a36c0204e"
+      url "https://github.com/danieljustus/symaira-print/releases/download/v0.4.0/symaira-print_0.4.0_linux_arm64.tar.gz"
+      sha256 "82e79037d29afa5c80731597d51f318a4ff67193d8a4d9a1253763df6bc0928b"
       define_method(:install) do
         bin.install "symprint"
       end
