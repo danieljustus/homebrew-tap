@@ -1,16 +1,16 @@
 class Symroom < Formula
   desc "Shared, verifiable work record for projects"
   homepage "https://github.com/danieljustus/symaira-room"
-  version "0.1.1"
-  license "MIT"
+  version "0.2.0"
+  license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-room/releases/download/v0.1.1/symroom_0.1.1_darwin_arm64.tar.gz"
-      sha256 "985af0fbeb1699e3018797f500d5f1262649414a58919c43cda7f200aaaf3bdd"
+      url "https://github.com/danieljustus/symaira-room/releases/download/v0.2.0/symroom_0.2.0_darwin_arm64.tar.gz"
+      sha256 "2a8dba31f86a7d896eb4d50a773c0c6072f1d3b04c076e3fd3bcfed80ffa2ed2"
     else
-      url "https://github.com/danieljustus/symaira-room/releases/download/v0.1.1/symroom_0.1.1_darwin_amd64.tar.gz"
-      sha256 "4c30009e23f052c89f98f692a5a80b9e5aae65c155e10899340d54fb7c0cfdd4"
+      url "https://github.com/danieljustus/symaira-room/releases/download/v0.2.0/symroom_0.2.0_darwin_amd64.tar.gz"
+      sha256 "a98e5eadac1d7c6b8c8f3ee7e171d456c1982738ee7e5731e7e5001e0a0d64f5"
     end
   end
 
