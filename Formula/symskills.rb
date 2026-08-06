@@ -5,21 +5,21 @@
 class Symskills < Formula
   desc "Portable Skill SSOT manager for local AI agent harnesses"
   homepage "https://github.com/danieljustus/symaira-skills"
-  version "0.1.10"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danieljustus/symaira-skills/releases/download/v0.1.10/symaira-skills_0.1.10_darwin_amd64.tar.gz"
-      sha256 "e74c8097310853daa6ed385ce1c619051d96caba887c0d6da76d9b2b94c37089"
+      url "https://github.com/danieljustus/symaira-skills/releases/download/v0.2.0/symaira-skills_0.2.0_darwin_amd64.tar.gz"
+      sha256 "8a08bee9004cc439872d9c38f6d0d356fdcdde7800aed42a65e6344788b42992"
 
       define_method(:install) do
         bin.install "symskills"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-skills/releases/download/v0.1.10/symaira-skills_0.1.10_darwin_arm64.tar.gz"
-      sha256 "a058308ebda753cb9711385809c1a6fc1382bb6e8f9428ef9555375a01a2bb5b"
+      url "https://github.com/danieljustus/symaira-skills/releases/download/v0.2.0/symaira-skills_0.2.0_darwin_arm64.tar.gz"
+      sha256 "f11480b877a8a5e88610a8eb85e78284a19ab480e536e7e0a4528bb2714c64e2"
 
       define_method(:install) do
         bin.install "symskills"
@@ -29,15 +29,15 @@ class Symskills < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-skills/releases/download/v0.1.10/symaira-skills_0.1.10_linux_amd64.tar.gz"
-      sha256 "41e155038c57ee3156fe0867250f3d382fa77cb7bcd9285e0f2d36beac919a39"
+      url "https://github.com/danieljustus/symaira-skills/releases/download/v0.2.0/symaira-skills_0.2.0_linux_amd64.tar.gz"
+      sha256 "36b04740a2940f04323901cb3f3e37a0f8af6dd080b859e4b47f79ec07efd47d"
       define_method(:install) do
         bin.install "symskills"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-skills/releases/download/v0.1.10/symaira-skills_0.1.10_linux_arm64.tar.gz"
-      sha256 "96bcf9afeb4654d9dd00148bc426e33bf0595a4d9282a621dc7933746b39516d"
+      url "https://github.com/danieljustus/symaira-skills/releases/download/v0.2.0/symaira-skills_0.2.0_linux_arm64.tar.gz"
+      sha256 "ca2ae9b5f966810f354c885e07cfa81ea3300d2fe4db825bfb902ab3ea96cc71"
       define_method(:install) do
         bin.install "symskills"
       end
