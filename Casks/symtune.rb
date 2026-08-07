@@ -1,6 +1,6 @@
 cask "symtune" do
-  version "0.8.1"
-  sha256 "6f227cbf1a0f408ca46dd3e422898524913ef078f2d37bded5a2cc5653c0f9f7"
+  version "0.9.0"
+  sha256 "f5f04a05902cf188759cbbb4fdcf3f77e677f244639862c9a20e81e219cecdff"
 
   url "https://github.com/danieljustus/symaira-tune/releases/download/v#{version}/symtune-#{version}.dmg"
   name "Symaira Tune"
