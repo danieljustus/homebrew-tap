@@ -1,6 +1,6 @@
 cask "symoperate" do
-  version "0.5.0"
-  sha256 "9a2f229d260c27fd63a906956eb0ec36553c4a9e2a22fa6a6cd32c8d5436abfd"
+  version "0.6.0"
+  sha256 "a6cecfb4d02c73ccc71439d7481ba0d5e53ad27d39891cbf6fa3c93c46f0523c"
 
   url "https://github.com/danieljustus/symaira-operate/releases/download/v#{version}/symoperate.dmg"
   name "Symoperate"
