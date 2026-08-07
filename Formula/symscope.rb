@@ -11,7 +11,7 @@ class Symscope < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/danieljustus/symaira-scope/releases/download/v0.4.0/symaira-scope_0.4.0_darwin_amd64.tar.gz"
-      sha256 "d0f3b3da8097ed5b9a646ede12a45c9ccd1ce373edc2a358c93432d0bdfcc333"
+      sha256 "9b12fa073b69923ef7919bf9a2f9d275c39243562cc78e9d6c0269c6e283b95e"
 
       define_method(:install) do
         bin.install "symscope"
@@ -19,7 +19,7 @@ class Symscope < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/danieljustus/symaira-scope/releases/download/v0.4.0/symaira-scope_0.4.0_darwin_arm64.tar.gz"
-      sha256 "27ff4d35bc20bf71427819e8fe0efed1ca11d26912ece403b7711e75409cd092"
+      sha256 "717bb44cc7d30c97d38e4a2f244d329d4761db1c08acfcccfa2ed71b79b70db6"
 
       define_method(:install) do
         bin.install "symscope"
@@ -30,14 +30,14 @@ class Symscope < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/danieljustus/symaira-scope/releases/download/v0.4.0/symaira-scope_0.4.0_linux_amd64.tar.gz"
-      sha256 "adc6a522eabfddbdda5f7624d1caa84403ee0592f2b6b599975c05f3eac89657"
+      sha256 "e2096af80184b1bf5f0614f68aa13d389966cedc5342f7df7e27a505fafe8573"
       define_method(:install) do
         bin.install "symscope"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/danieljustus/symaira-scope/releases/download/v0.4.0/symaira-scope_0.4.0_linux_arm64.tar.gz"
-      sha256 "23b85f92b5ed6d31bdcd868f7c12431abeed97617892010dbe369b22750f1921"
+      sha256 "c7b2a5cadc68719f064d1906a35511b82692599d6b219e5608e8d87999cf05fa"
       define_method(:install) do
         bin.install "symscope"
       end
