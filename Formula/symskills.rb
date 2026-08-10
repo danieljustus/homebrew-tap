@@ -11,7 +11,7 @@ class Symskills < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/danieljustus/symaira-skills/releases/download/v0.3.1/symaira-skills_0.3.1_darwin_amd64.tar.gz"
-      sha256 "fa2828a8d7e5816c7e822bad0cb2b4aa9e6aab9835b9112ae0edc704220f40a2"
+      sha256 "f1c35672f9ecf3c5e9c579b9ba1eb3d4c48e8e81242e2c8422c8845d22ffcf13"
 
       define_method(:install) do
         bin.install "symskills"
@@ -19,7 +19,7 @@ class Symskills < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/danieljustus/symaira-skills/releases/download/v0.3.1/symaira-skills_0.3.1_darwin_arm64.tar.gz"
-      sha256 "29eb0518de93aaddab4f090d7f1df035afbcd7d682bb0e408cd1d3839079ce1d"
+      sha256 "25ff35c5c150fd5b640e6480f47f0e5b39ef5500694b21aa9757ca5c4ed0a07f"
 
       define_method(:install) do
         bin.install "symskills"
@@ -30,14 +30,14 @@ class Symskills < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/danieljustus/symaira-skills/releases/download/v0.3.1/symaira-skills_0.3.1_linux_amd64.tar.gz"
-      sha256 "4615970b1fd987b0bd769035647d34d1783eef219a0e0cfe6e2798eca5a979bb"
+      sha256 "00eba68df75c2696b4eda1d6224f2e8f9ec0921ce2fe6be23e6f63ee65006901"
       define_method(:install) do
         bin.install "symskills"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/danieljustus/symaira-skills/releases/download/v0.3.1/symaira-skills_0.3.1_linux_arm64.tar.gz"
-      sha256 "b54dd41f99a80ecfa21c67f0a94f24c2a7ad95e237ff8fc4de3ac36f6d2c7340"
+      sha256 "1b72012b3975c21dcc5af1194fd9eb46fa0eb04213aa82469872b541bf961fda"
       define_method(:install) do
         bin.install "symskills"
       end
