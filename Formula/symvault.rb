@@ -5,28 +5,26 @@
 class Symvault < Formula
   desc "Modern CLI password manager with age encryption"
   homepage "https://github.com/danieljustus/symaira-vault"
-  version "0.14.0"
+  version "0.15.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.14.0/symaira-vault_0.14.0_darwin_amd64.tar.gz"
-      sha256 "72734ef4620c4ae3c7a4d6b48bb958fdc75897dd443b0821a730bedfd2acd8e9"
+      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.15.0/symaira-vault_0.15.0_darwin_amd64.tar.gz"
+      sha256 "0da65de80e0b15ad330589e4b61c3055138f8cb11e92a2c316cb0346f6040dff"
 
       define_method(:install) do
         bin.install "symvault"
-        bin.install_symlink "symvault" => "openpass"
         generate_completions_from_executable(bin/"symvault", "completion")
         man1.install Dir["docs/man/*.1"]
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.14.0/symaira-vault_0.14.0_darwin_arm64.tar.gz"
-      sha256 "9719553388c93e7e88be79f5f761cd904e48b1532fb1b2f613f83fc857bd599b"
+      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.15.0/symaira-vault_0.15.0_darwin_arm64.tar.gz"
+      sha256 "1ebc7d74aeecb379e5af7873c99a94c8afa703b401608ed269b44d501fb89857"
 
       define_method(:install) do
         bin.install "symvault"
-        bin.install_symlink "symvault" => "openpass"
         generate_completions_from_executable(bin/"symvault", "completion")
         man1.install Dir["docs/man/*.1"]
       end
@@ -35,21 +33,19 @@ class Symvault < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.14.0/symaira-vault_0.14.0_linux_amd64.tar.gz"
-      sha256 "dfd0aabe0cc08b700a31f0d9b2abb0588a8988813186ed04cc2499b2a4d6b5cc"
+      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.15.0/symaira-vault_0.15.0_linux_amd64.tar.gz"
+      sha256 "a2e561ee8bbc95b53ecbe276b1d41e806924126bffc95d341ea890898632202b"
       define_method(:install) do
         bin.install "symvault"
-        bin.install_symlink "symvault" => "openpass"
         generate_completions_from_executable(bin/"symvault", "completion")
         man1.install Dir["docs/man/*.1"]
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.14.0/symaira-vault_0.14.0_linux_arm64.tar.gz"
-      sha256 "01c40425c0b23cb3896c454e642312842039dcaba8de2a8b62b9d6f0b36fb770"
+      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.15.0/symaira-vault_0.15.0_linux_arm64.tar.gz"
+      sha256 "55e162e1929366eaa5b8a9554a67ad0b01c07e4b86f6038a21967857e38ba9f2"
       define_method(:install) do
         bin.install "symvault"
-        bin.install_symlink "symvault" => "openpass"
         generate_completions_from_executable(bin/"symvault", "completion")
         man1.install Dir["docs/man/*.1"]
       end
@@ -70,14 +66,11 @@ class Symvault < Formula
       For MCP server setup:
         symvault mcp-config <name>
 
-      The legacy openpass command remains available as a compatibility alias.
-
       Documentation: https://github.com/danieljustus/symaira-vault#readme
     EOS
   end
 
   test do
     system "#{bin}/symvault", "version"
-    system "#{bin}/openpass", "version"
   end
 end
