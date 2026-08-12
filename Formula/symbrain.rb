@@ -5,21 +5,21 @@
 class Symbrain < Formula
   desc "Portable agent-context layer: one MCP gateway multiplexing vault, memory, and skills for AI harnesses"
   homepage "https://github.com/danieljustus/symaira-brain"
-  version "0.5.1"
+  version "0.6.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danieljustus/symaira-brain/releases/download/v0.5.1/symbrain_0.5.1_darwin_amd64.tar.gz"
-      sha256 "f1e76cc8ca8410a6feddd42d15b822c3f3b4701b93ab033c78178174b624f13b"
+      url "https://github.com/danieljustus/symaira-brain/releases/download/v0.6.0/symbrain_0.6.0_darwin_amd64.tar.gz"
+      sha256 "93d8c33dafce28a119121daff39dea683b24dbe9ac6b5bb02703129a09133531"
 
       define_method(:install) do
         bin.install "symbrain"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-brain/releases/download/v0.5.1/symbrain_0.5.1_darwin_arm64.tar.gz"
-      sha256 "fe59641530c2813e30f10405f71afa51af88a937bacd8d3df9ad15e9c72fa045"
+      url "https://github.com/danieljustus/symaira-brain/releases/download/v0.6.0/symbrain_0.6.0_darwin_arm64.tar.gz"
+      sha256 "bfb4bd10c1e0ac7ae4ff5ee4072559fba3a2f5ac32f6bccb5ac28c2406cad763"
 
       define_method(:install) do
         bin.install "symbrain"
@@ -29,15 +29,15 @@ class Symbrain < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-brain/releases/download/v0.5.1/symbrain_0.5.1_linux_amd64.tar.gz"
-      sha256 "d73ca943d4f9679291133c067aef3fa0946a175603de9f1d2867aa1f08f85bc0"
+      url "https://github.com/danieljustus/symaira-brain/releases/download/v0.6.0/symbrain_0.6.0_linux_amd64.tar.gz"
+      sha256 "c78c5b8208671949a588262bbb38f01be376ab994f61fcfcbcb54458a6c5481a"
       define_method(:install) do
         bin.install "symbrain"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-brain/releases/download/v0.5.1/symbrain_0.5.1_linux_arm64.tar.gz"
-      sha256 "a053b805d76ec87dd968ea58c32b90ba8639a49bb4a039c3829726b3938566e7"
+      url "https://github.com/danieljustus/symaira-brain/releases/download/v0.6.0/symbrain_0.6.0_linux_arm64.tar.gz"
+      sha256 "f5c778011c4322c5027aaed499370a41fec58283f9c83441527cb40b76456993"
       define_method(:install) do
         bin.install "symbrain"
       end
