@@ -1,6 +1,6 @@
 cask "symhub" do
-  version "0.3.0"
-  sha256 "df3be26978c6e09ffeac70d7a9a3de19d53e5ae31d92f2bc13b6009c36c68c2c"
+  version "0.4.0"
+  sha256 "50db06d7cedcb7e51cf29e84bb4932a69d58fa0c9ddef13acdd38ebd27ffa499"
 
   url "https://github.com/danieljustus/symaira-hub/releases/download/v#{version}/SymairaHub-#{version}.dmg"
   name "Symaira Hub"
