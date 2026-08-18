@@ -5,13 +5,13 @@
 class Symvault < Formula
   desc "Modern CLI password manager with age encryption"
   homepage "https://github.com/danieljustus/symaira-vault"
-  version "0.15.2"
+  version "0.15.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.15.2/symaira-vault_0.15.2_darwin_amd64.tar.gz"
-      sha256 "1a85471a7a2041782e3b5150ba9580de992cd602c39b2f6aca496216d9392ed9"
+      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.15.3/symaira-vault_0.15.3_darwin_amd64.tar.gz"
+      sha256 "5a60ed80138c97bafbae487bd1a6c1234e906c21a4d4fb86ac819e0182ef1deb"
 
       define_method(:install) do
         bin.install "symvault"
@@ -20,8 +20,8 @@ class Symvault < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.15.2/symaira-vault_0.15.2_darwin_arm64.tar.gz"
-      sha256 "b67abd717d5b18a65a515edeb550973a2f0ad320032d013c0d549f62fc9f4ae5"
+      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.15.3/symaira-vault_0.15.3_darwin_arm64.tar.gz"
+      sha256 "59a1f448e0cae06c4370df8392c628210a8b848193a9ffa8ca655234b393b744"
 
       define_method(:install) do
         bin.install "symvault"
@@ -33,8 +33,8 @@ class Symvault < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.15.2/symaira-vault_0.15.2_linux_amd64.tar.gz"
-      sha256 "8562e70c361c307e3024b7972e2fd37311eb099b6cd7c3654af28bc13da2d6aa"
+      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.15.3/symaira-vault_0.15.3_linux_amd64.tar.gz"
+      sha256 "19448317d916451bd60ca1547577203a64a849339b38e9b95dfd3c0189a45017"
       define_method(:install) do
         bin.install "symvault"
         generate_completions_from_executable(bin/"symvault", "completion")
@@ -42,8 +42,8 @@ class Symvault < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.15.2/symaira-vault_0.15.2_linux_arm64.tar.gz"
-      sha256 "5e539ab1041a147ae5fdb37af8be933ce94cb5e0d6f26cd26e0f8382f89fa4ff"
+      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.15.3/symaira-vault_0.15.3_linux_arm64.tar.gz"
+      sha256 "692262a4d3aae38729140797d48feff37c5806623c97a424add7aa2abe4db677"
       define_method(:install) do
         bin.install "symvault"
         generate_completions_from_executable(bin/"symvault", "completion")
