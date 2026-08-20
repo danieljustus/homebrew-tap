@@ -60,5 +60,4 @@ brew install symvault
 
 ## NOTES
 - This is a separate Git repo from the parent workspace. Commits in `homebrew-tap/` do not touch any `symaira-*` repo.
-- Pro services (`*-pro/`) do **not** ship through this tap. Pro is a private Cloud offering, not a brew-distributed tool.
 - When a tool renames (e.g., `seek` → `symseek`), add an entry to `formula_renames.json` and keep a deprecated stub for one release cycle.
