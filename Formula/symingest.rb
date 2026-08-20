@@ -8,6 +8,8 @@ class Symingest < Formula
   version "0.12.1"
   license "Apache-2.0"
 
+  deprecate! date: "2026-08-20", because: "absorbed into symaira-desktop (symdesk)"
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/danieljustus/symaira-ingest/releases/download/v0.12.1/symaira-ingest_0.12.1_darwin_amd64.tar.gz"
