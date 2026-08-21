@@ -8,6 +8,8 @@ class Symseek < Formula
   version "2.6.1"
   license "Apache-2.0"
 
+  deprecate! date: "2026-08-21", because: "absorbed into symaira-desktop (symdesk)"
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/danieljustus/symaira-seek/releases/download/v2.6.1/symaira-seek_2.6.1_darwin_amd64.tar.gz"
