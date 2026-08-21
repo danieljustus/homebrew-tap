@@ -8,6 +8,8 @@ class Symguard < Formula
   version "0.4.1"
   license "Apache-2.0"
 
+  deprecate! date: "2026-08-21", because: "absorbed into symaira-brain (symbrain)"
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/danieljustus/symaira-guard/releases/download/v0.4.1/symaira-guard_0.4.1_darwin_amd64.tar.gz"
