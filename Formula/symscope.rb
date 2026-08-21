@@ -8,6 +8,8 @@ class Symscope < Formula
   version "0.4.1"
   license "Apache-2.0"
 
+  deprecate! date: "2026-08-21", because: "absorbed into symaira-cockpit (symcockpit)"
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/danieljustus/symaira-scope/releases/download/v0.4.1/symaira-scope_0.4.1_darwin_amd64.tar.gz"

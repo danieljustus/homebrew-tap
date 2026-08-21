@@ -9,6 +9,8 @@ cask "symtune" do
 
   depends_on macos: :sonoma
 
+  deprecate! date: "2026-08-21", because: "absorbed into symaira-cockpit (symcockpit)"
+
   app "SymairaTune.app"
   binary "symtune"
 
