@@ -8,6 +8,8 @@ class Symskills < Formula
   version "0.5.0"
   license "Apache-2.0"
 
+  deprecate! date: "2026-08-21", because: "absorbed into symaira-brain (symbrain)"
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/danieljustus/symaira-skills/releases/download/v0.5.0/symaira-skills_0.5.0_darwin_amd64.tar.gz"
