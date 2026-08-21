@@ -4,6 +4,8 @@ class Symroom < Formula
   version "0.3.0"
   license "Apache-2.0"
 
+  deprecate! date: "2026-08-21", because: "absorbed into symaira-desktop (symdesk)"
+
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/danieljustus/symaira-room/releases/download/v0.3.0/symroom_0.3.0_darwin_arm64.tar.gz"
