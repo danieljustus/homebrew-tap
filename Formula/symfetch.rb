@@ -8,6 +8,8 @@ class Symfetch < Formula
   version "0.5.0"
   license "Apache-2.0"
 
+  deprecate! date: "2026-08-23", because: "absorbed into symaira-browse (symbrowse)"
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/danieljustus/symaira-fetch/releases/download/v0.5.0/symaira-fetch_0.5.0_darwin_amd64.tar.gz"

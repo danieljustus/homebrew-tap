@@ -7,13 +7,9 @@ cask "symhub" do
   desc "Native macOS control center for the Symaira developer tools"
   homepage "https://github.com/danieljustus/symaira-hub"
 
-  livecheck do
-    url "https://github.com/danieljustus/symaira-hub/releases/latest"
-    strategy :header_match
-    regex(/SymairaHub-(\d+(?:\.\d+)+)\.dmg/i)
-  end
-
   depends_on macos: :sonoma
+
+  deprecate! date: "2026-08-23", because: "the hub app was discontinued; SymDesk is the human shell"
 
   app "SymairaHub.app"
 
