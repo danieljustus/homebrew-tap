@@ -35,7 +35,7 @@ verschwinden mit ihrer nächsten Aufräumrunde:
 | Deprecated | Nachfolger |
 |---|---|
 | `symfetch` | `symbrowse` |
-| `symmemory`, `symskills`, `symguard` | `symbrain` |
-| `symingest`, `symmeet`, `symprint`, `symroom`, `symseek` | `symdesk` |
-| `symscope`, `symtune`, `symoperate` | `symcockpit` |
+| `symmemory`, `symskills`, `symguard` (+ Cask `symskills`) | `symbrain` |
+| `symingest`, `symmeet`, `symprint`, `symroom`, `symseek` (+ Casks `symingest`, `symmeet-agent`) | `symdesk` |
+| `symscope`, `symtune`, `symoperate` (+ Casks `symtune`, `symoperate`) | `symcockpit` |
 | `symhub` (Cask) | eingestellt — SymDesk ist die Human-Shell |
