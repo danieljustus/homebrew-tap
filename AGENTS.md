@@ -11,14 +11,22 @@ homebrew-tap/
 ├── README.md                  # tap landing page
 ├── formula_renames.json       # historical formula rename map
 ├── Formula/                   # CLI formulae (Go binaries)
+│   ├── symbrain.rb
+│   ├── symbrowse.rb
+│   ├── symcockpit.rb
+│   ├── symdesk.rb
 │   ├── symeraseme.rb
-│   ├── symfetch.rb
-│   ├── symmemory.rb
-│   ├── symseek.rb
-│   └── symvault.rb
+│   ├── symfritz.rb
+│   ├── symvault.rb
+│   ├── symvibe.rb
+│   └── …            # deprecated: symfetch, symguard, symingest, symmeet,
+│                    #   symmemory, symprint, symroom, symscope, symseek,
+│                    #   symskills, symtune
 └── Casks/                     # macOS apps (Swift/Xcode bundles)
+    ├── symdesk-app.rb
     ├── symoperate.rb
-    └── symterminal.rb
+    ├── symterminal.rb
+    └── symtune.rb
 ```
 
 ## WHERE TO LOOK

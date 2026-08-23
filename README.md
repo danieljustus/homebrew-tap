@@ -15,16 +15,27 @@ brew tap danieljustus/tap
 | Name | Type | Description | Install Command |
 |---|---|---|---|
 | `symvault` | Formula | Secure password management CLI tool | `brew install symvault` |
-| `symmemory` | Formula | Persistent memory layer and semantic knowledge base | `brew install symmemory` |
-| `symseek` | Formula | Local-first, CGO-free document retrieval | `brew install symseek` |
+| `symbrain` | Formula | Portable agent-context layer (memory, skills, policy) | `brew install symbrain` |
+| `symdesk` | Formula | Local-first markdown vault workspace: CLI and MCP server | `brew install symdesk` |
+| `symcockpit` | Formula | This machine: thermals, power, GUI automation, port/MCP inventory | `brew install symcockpit` |
+| `symbrowse` | Formula | Agent-operated browser and web fetch engine | `brew install symbrowse` |
 | `symeraseme` | Formula | Automated data broker removal tool | `brew install symeraseme` |
-| `symingest` | Formula | Document ingestion + OCR core | `brew install symingest` |
-| `symvibe` | Formula | Graphical Vibe-Coding Baukasten | `brew install symvibe` |
-| `symfetch` | Formula | AI-native web fetch engine for LLM agents | `brew install symfetch` |
-| `symscope` | Formula | Cross-platform port inventory and MCP discovery tool | `brew install symscope` |
 | `symfritz` | Formula | CLI to administer, analyse, and control an AVM FRITZ!Box | `brew install symfritz` |
-| `symguard` | Formula | Local-first security gateway for AI agents and MCP servers | `brew install symguard` |
-| `symskills` | Formula | Portable Skill SSOT manager for local AI agent harnesses | `brew install symskills` |
+| `symvibe` | Formula | Graphical Vibe-Coding Baukasten | `brew install symvibe` |
 | `symterminal` | Cask | Symaira Desktop terminal app | `brew install --cask symterminal` |
-| `symoperate` | Cask | Native macOS desktop-automation MCP server | `brew install --cask symoperate` |
-| `symtune` | Cask | Native macOS hardware tuning CLI and MCP server | `brew install --cask symtune` |
+| `symdesk-app` | Cask | Local-first markdown vault workspace (desktop app) | `brew install --cask symdesk-app` |
+| `symvibe` | Cask | Vibe-Coding Baukasten (desktop app) | `brew install --cask symvibe` |
+
+### Deprecated
+
+Die Repo-Konsolidierung (2026-08) hat mehrere Tools in vier Produkte
+zusammengeführt. Die folgenden Einträge bleiben installierbar, warnen aber und
+verschwinden mit ihrer nächsten Aufräumrunde:
+
+| Deprecated | Nachfolger |
+|---|---|
+| `symfetch` | `symbrowse` |
+| `symmemory`, `symskills`, `symguard` | `symbrain` |
+| `symingest`, `symmeet`, `symprint`, `symroom`, `symseek` | `symdesk` |
+| `symscope`, `symtune`, `symoperate` | `symcockpit` |
+| `symhub` (Cask) | eingestellt — SymDesk ist die Human-Shell |
