@@ -4,7 +4,7 @@
 class Symcockpit < Formula
   desc "This machine: thermals, power, GUI automation and port/MCP inventory"
   homepage "https://github.com/danieljustus/symaira-cockpit"
-  version "0.1.0"
+  version "${VERSION}"
   license "Apache-2.0"
 
   # One universal binary rather than per-arch archives: symcockpit is
@@ -13,8 +13,8 @@ class Symcockpit < Formula
   # produces a single artifact for both Macs.
   depends_on macos: :sonoma
 
-  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v0.1.0/symcockpit_0.1.0_darwin_universal.tar.gz"
-  sha256 "4fc89e8bd0ae950b758e2ea3a4bd179e41d4be134a04f70753b44d75146e7f02"
+  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v\#{version}/symcockpit_\#{version}_darwin_universal.tar.gz"
+  sha256 "${TAR_SHA256}"
 
   def install
     bin.install "symcockpit"
@@ -29,11 +29,12 @@ class Symcockpit < Formula
         symcockpit scope <command>      (was: symscope)
 
       operate needs Accessibility and Screen Recording permissions; grant them
-      in System Settings > Privacy & Security on first use.
+      in System Settings > Privacy & Security on first use. The menu bar app
+      is distributed separately: brew install --cask danieljustus/tap/symcockpit
     EOS
   end
 
   test do
-    assert_match "symcockpit #{version}", shell_output("#{bin}/symcockpit version")
+    assert_match "symcockpit \#{version}", shell_output("\#{bin}/symcockpit version")
   end
 end
