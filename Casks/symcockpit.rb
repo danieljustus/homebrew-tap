@@ -1,8 +1,8 @@
 cask "symcockpit" do
-  version "0.2.0"
-  sha256 "bf4f5fd1daec2c17689b52980f9a69d8119227918d21e12c213c86fcc7aa475a"
+  version "0.2.1"
+  sha256 "bda2076e50bbd6e4912d5ae682de14bf08ced00d85311111127de47fd8c63b1d"
 
-  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v#{version}/Symaira-Cockpit-#{version}.dmg"
+  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v\#{version}/Symaira-Cockpit-\#{version}.dmg"
   name "Symaira Cockpit"
   desc "This machine: thermals, power, GUI automation and port/MCP inventory"
   homepage "https://github.com/danieljustus/symaira-cockpit"
