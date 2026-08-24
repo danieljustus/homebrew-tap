@@ -13,7 +13,7 @@ class Symcockpit < Formula
   # produces a single artifact for both Macs.
   depends_on macos: :sonoma
 
-  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v\#{version}/symcockpit_\#{version}_darwin_universal.tar.gz"
+  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v#{version}/symcockpit_#{version}_darwin_universal.tar.gz"
   sha256 "43705a8b800b8eeeb27cebfd77bec1ed596f5a77aabf3ec4ee89dcc97b079b51"
 
   def install
