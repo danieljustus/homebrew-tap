@@ -11,7 +11,7 @@ class Symbrowse < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/danieljustus/symaira-browse/releases/download/v0.2.1/symbrowse_0.2.1_darwin_amd64.tar.gz"
-      sha256 "d81ee8b4833b9435577a1f57f9b21d03c502b9be6420266e6e242c49c3db0a58"
+      sha256 "58e88e134d182d34590acfad766f3ea25ad87b3e9e09342135c127d37c5dee79"
 
       define_method(:install) do
         bin.install "symbrowse"
@@ -19,7 +19,7 @@ class Symbrowse < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/danieljustus/symaira-browse/releases/download/v0.2.1/symbrowse_0.2.1_darwin_arm64.tar.gz"
-      sha256 "d1f6543bff599186e9d0bb195f0dac17a400307176f5bb2edd4b5244517f80b8"
+      sha256 "ec628d49ad5cdb259406123393efafb715cff6084cfa7a1f3af6738d06967c36"
 
       define_method(:install) do
         bin.install "symbrowse"
@@ -30,14 +30,14 @@ class Symbrowse < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/danieljustus/symaira-browse/releases/download/v0.2.1/symbrowse_0.2.1_linux_amd64.tar.gz"
-      sha256 "68ca7e024fcba926c478865b3163e2a154c164815e9cee5f21c32ea5d8ac4372"
+      sha256 "6a3c5691c8fa24005444347cc9854efe521ac18fd110b98241333f2a00a42fe5"
       define_method(:install) do
         bin.install "symbrowse"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/danieljustus/symaira-browse/releases/download/v0.2.1/symbrowse_0.2.1_linux_arm64.tar.gz"
-      sha256 "89d5b58f26d4e305a86a266febc8c24200d16c0806cb1eaba4f230f2f0d23ea9"
+      sha256 "cf814a6013a4aa3ee62a5de9e4bb241a066d2f756e22f92133ccf3a84a5c0a41"
       define_method(:install) do
         bin.install "symbrowse"
       end
