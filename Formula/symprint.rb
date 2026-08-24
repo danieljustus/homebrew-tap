@@ -8,7 +8,7 @@ class Symprint < Formula
   version "0.5.0"
   license "Apache-2.0"
 
-  deprecate! date: "2026-08-21", because: "absorbed into symaira-desktop (symdesk)"
+  disable! date: "2026-08-24", because: "absorbed into symaira-desktop (symdesk)"
 
   depends_on "typst"
 

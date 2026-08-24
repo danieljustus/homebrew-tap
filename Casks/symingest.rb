@@ -10,7 +10,7 @@ cask "symingest" do
 
   depends_on macos: ">= :ventura"
 
-  deprecate! date: "2026-08-20", because: "absorbed into symaira-desktop (SymDesk)"
+  disable! date: "2026-08-24", because: "absorbed into symaira-desktop (SymDesk)"
 
   app "Symingest.app"
 

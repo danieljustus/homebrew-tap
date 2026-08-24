@@ -9,7 +9,7 @@ cask "symmeet-agent" do
 
   depends_on macos: :sequoia
 
-  deprecate! date: "2026-08-20", because: "absorbed into symaira-desktop (SymDesk)"
+  disable! date: "2026-08-24", because: "absorbed into symaira-desktop (SymDesk)"
 
   app "SymMeetAgent.app"
 

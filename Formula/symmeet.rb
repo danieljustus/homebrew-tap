@@ -11,7 +11,7 @@ class Symmeet < Formula
 
   depends_on macos: :sequoia
 
-  deprecate! date: "2026-08-20", because: "absorbed into symaira-desktop (symdesk)"
+  disable! date: "2026-08-24", because: "absorbed into symaira-desktop (symdesk)"
 
   def install
     bin.install "symmeet"

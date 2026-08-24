@@ -15,7 +15,7 @@ cask "symskills" do
 
   depends_on macos: :sonoma
 
-  deprecate! date: "2026-08-21", because: "absorbed into symaira-brain (SymBrainApp)"
+  disable! date: "2026-08-24", because: "absorbed into symaira-brain (SymBrainApp)"
 
   app "Symskills.app"
 

@@ -8,7 +8,7 @@ class Symfetch < Formula
   version "0.5.0"
   license "Apache-2.0"
 
-  deprecate! date: "2026-08-23", because: "absorbed into symaira-browse (symbrowse)"
+  disable! date: "2026-08-24", because: "absorbed into symaira-browse (symbrowse)"
 
   on_macos do
     if Hardware::CPU.intel?

@@ -8,7 +8,7 @@ class Symscope < Formula
   version "0.4.1"
   license "Apache-2.0"
 
-  deprecate! date: "2026-08-21", because: "absorbed into symaira-cockpit (symcockpit)"
+  disable! date: "2026-08-24", because: "absorbed into symaira-cockpit (symcockpit)"
 
   on_macos do
     if Hardware::CPU.intel?

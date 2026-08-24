@@ -9,7 +9,7 @@ cask "symoperate" do
 
   depends_on macos: :sequoia
 
-  deprecate! date: "2026-08-21", because: "absorbed into symaira-cockpit (symcockpit)"
+  disable! date: "2026-08-24", because: "absorbed into symaira-cockpit (symcockpit)"
 
   binary "symoperate"
 

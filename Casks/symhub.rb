@@ -9,7 +9,7 @@ cask "symhub" do
 
   depends_on macos: :sonoma
 
-  deprecate! date: "2026-08-23", because: "the hub app was discontinued; SymDesk is the human shell"
+  disable! date: "2026-08-24", because: "the hub app was discontinued; SymDesk is the human shell"
 
   app "SymairaHub.app"
 

@@ -8,7 +8,7 @@ class Symmemory < Formula
   version "0.17.0"
   license "Apache-2.0"
 
-  deprecate! date: "2026-08-21", because: "absorbed into symaira-brain (symbrain)"
+  disable! date: "2026-08-24", because: "absorbed into symaira-brain (symbrain)"
 
   on_macos do
     if Hardware::CPU.intel?
