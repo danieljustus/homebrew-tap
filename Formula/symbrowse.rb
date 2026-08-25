@@ -5,21 +5,21 @@
 class Symbrowse < Formula
   desc "Agent-operable browser automation over Chrome DevTools Protocol"
   homepage "https://github.com/danieljustus/symaira-browse"
-  version "0.2.2"
+  version "0.2.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danieljustus/symaira-browse/releases/download/v0.2.2/symbrowse_0.2.2_darwin_amd64.tar.gz"
-      sha256 "6030aac4644631851d51861f854687c9b475ef4a1ae85acc929256caba2a5eff"
+      url "https://github.com/danieljustus/symaira-browse/releases/download/v0.2.3/symbrowse_0.2.3_darwin_amd64.tar.gz"
+      sha256 "8305dda8232a41880e81964e63c9e7445c5e6f7cfb4b832ea9be04497304d921"
 
       define_method(:install) do
         bin.install "symbrowse"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-browse/releases/download/v0.2.2/symbrowse_0.2.2_darwin_arm64.tar.gz"
-      sha256 "6af6e2d6f9f1694c77a54f5fe0b8e88d9ce4c4bdd649c22f3c6d85b8da92bc46"
+      url "https://github.com/danieljustus/symaira-browse/releases/download/v0.2.3/symbrowse_0.2.3_darwin_arm64.tar.gz"
+      sha256 "381ecb9712ffc0ec32c44da220a1d4622f93ca167fd2a5582bdb4948a7bccf21"
 
       define_method(:install) do
         bin.install "symbrowse"
@@ -29,15 +29,15 @@ class Symbrowse < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-browse/releases/download/v0.2.2/symbrowse_0.2.2_linux_amd64.tar.gz"
-      sha256 "65b918f6afd869bb1844fd7457e93e4002c47aee1ef8552ac136e842e523f836"
+      url "https://github.com/danieljustus/symaira-browse/releases/download/v0.2.3/symbrowse_0.2.3_linux_amd64.tar.gz"
+      sha256 "ed228b7d3009ff2c53405c06a8315ce22eface33c5e7620783eebc77731267a1"
       define_method(:install) do
         bin.install "symbrowse"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-browse/releases/download/v0.2.2/symbrowse_0.2.2_linux_arm64.tar.gz"
-      sha256 "ba4c6b4601da0a837a53cd8ef3bde656798d0c5fbb9fc7326dac601509f2f26b"
+      url "https://github.com/danieljustus/symaira-browse/releases/download/v0.2.3/symbrowse_0.2.3_linux_arm64.tar.gz"
+      sha256 "ff89604fe09333e1a5b56e8409d3d2965f7d5088b0400b22371d3bee32a39e61"
       define_method(:install) do
         bin.install "symbrowse"
       end
