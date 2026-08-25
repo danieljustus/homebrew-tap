@@ -1,16 +1,16 @@
 cask "symdesk-app" do
-  version "0.9.0"
-  sha256 "8d70bf8f6837ff0e69b6364c8cc0e15a2207f6dcd9e6283be659cf9aa772a6bc"
+  version "0.10.0"
+  sha256 "decfbf03de26c624e936cbaeedc1c2431376d0c969f2a4b77ef4c5f22a86f041"
 
-  url "https://github.com/danieljustus/symaira-desktop/releases/download/v#{version}/SymDesk-#{version}.dmg"
-  name "SymDesk"
+  url "https://github.com/danieljustus/symaira-desktop/releases/download/v#{version}/Symaira-Desktop-#{version}-macos.dmg"
+  name "Symaira Desktop"
   desc "Local-first markdown vault workspace"
   homepage "https://github.com/danieljustus/symaira-desktop"
 
   livecheck do
     url "https://github.com/danieljustus/symaira-desktop/releases/latest"
     strategy :header_match
-    regex(/SymDesk-(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/Symaira-Desktop-(\d+(?:\.\d+)*)-macos\.dmg/i)
   end
 
   depends_on macos: :sonoma
