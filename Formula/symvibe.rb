@@ -5,21 +5,21 @@
 class Symvibe < Formula
   desc "Graphical Vibe-Coding Baukasten that drives opencode"
   homepage "https://github.com/danieljustus/symaira-vibecoder"
-  version "0.11.0"
+  version "0.12.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danieljustus/symaira-vibecoder/releases/download/v0.11.0/symvibe_0.11.0_darwin_amd64.tar.gz"
-      sha256 "b22d438b3bd50c3f9dd65f7c795c7c4699c96f84c373e68b0aac7a94e33e9f1b"
+      url "https://github.com/danieljustus/symaira-vibecoder/releases/download/v0.12.0/symvibe_0.12.0_darwin_amd64.tar.gz"
+      sha256 "b62ff2ad2bcae039086752bc8e5810deafade4e11e1e5930660262569e7f7ad6"
 
       define_method(:install) do
         bin.install "symvibe"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-vibecoder/releases/download/v0.11.0/symvibe_0.11.0_darwin_arm64.tar.gz"
-      sha256 "22ae4dea3622b7431fdeac822394445989382bf736ccfe41c8cf72ec3c79e2f0"
+      url "https://github.com/danieljustus/symaira-vibecoder/releases/download/v0.12.0/symvibe_0.12.0_darwin_arm64.tar.gz"
+      sha256 "a7ee0ed1a3e355915a03fc332513e09823b118e33a11ea6cbbe6043180e8b2a9"
 
       define_method(:install) do
         bin.install "symvibe"
@@ -29,15 +29,15 @@ class Symvibe < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-vibecoder/releases/download/v0.11.0/symvibe_0.11.0_linux_amd64.tar.gz"
-      sha256 "afa2524695e0c5a245f0bed1841c072c82051757e980cef2b3c2c86cfc0bcc8e"
+      url "https://github.com/danieljustus/symaira-vibecoder/releases/download/v0.12.0/symvibe_0.12.0_linux_amd64.tar.gz"
+      sha256 "11ed58f7aaece3695c565cd9ec03d65776bd95ca67b0a5200ab410ccb5ea1c65"
       define_method(:install) do
         bin.install "symvibe"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-vibecoder/releases/download/v0.11.0/symvibe_0.11.0_linux_arm64.tar.gz"
-      sha256 "80e50c3976d6b30ef88b9e7a47951da2d4b3b8843632564e5581d78b37439745"
+      url "https://github.com/danieljustus/symaira-vibecoder/releases/download/v0.12.0/symvibe_0.12.0_linux_arm64.tar.gz"
+      sha256 "ccf2b0f87f403fe5de8f24aceaafad1de027379e7e37083941f23a0bb227f703"
       define_method(:install) do
         bin.install "symvibe"
       end
