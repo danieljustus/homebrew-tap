@@ -18,14 +18,12 @@ homebrew-tap/
 │   ├── symeraseme.rb
 │   ├── symfritz.rb
 │   ├── symvault.rb
-│   ├── symvibe.rb
 │   └── …            # deprecated: symfetch, symguard, symingest, symmeet,
 │                    #   symmemory, symprint, symroom, symscope, symseek,
 │                    #   symskills, symtune
 └── Casks/                     # macOS apps (Swift/Xcode bundles)
     ├── symdesk-app.rb
     ├── symoperate.rb
-    ├── symterminal.rb
     └── symtune.rb
 ```
 
@@ -53,7 +51,7 @@ homebrew-tap/
 ## COMMANDS
 ```bash
 # Local validation (requires brew)
-brew style Formula/symvault.rb Casks/symterminal.rb
+brew style Formula/symvault.rb Casks/symdesk-app.rb
 brew audit --strict --new Formula/symvault.rb
 
 # Test install (after release)

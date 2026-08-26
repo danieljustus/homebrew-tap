@@ -21,10 +21,7 @@ brew tap danieljustus/tap
 | `symbrowse` | Formula | Agent-operated browser and web fetch engine | `brew install symbrowse` |
 | `symeraseme` | Formula | Automated data broker removal tool | `brew install symeraseme` |
 | `symfritz` | Formula | CLI to administer, analyse, and control an AVM FRITZ!Box | `brew install symfritz` |
-| `symvibe` | Formula | Graphical Vibe-Coding Baukasten | `brew install symvibe` |
-| `symterminal` | Cask | Symaira Desktop terminal app | `brew install --cask symterminal` |
 | `symdesk-app` | Cask | Local-first markdown vault workspace (desktop app) | `brew install --cask symdesk-app` |
-| `symvibe` | Cask | Vibe-Coding Baukasten (desktop app) | `brew install --cask symvibe` |
 
 ### Deprecated
 
