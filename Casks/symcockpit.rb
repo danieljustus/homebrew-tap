@@ -1,6 +1,6 @@
 cask "symcockpit" do
-  version "0.4.0"
-  sha256 "556d53e6e7d4b9c63830a46de504ef225f2ff168d5ae019af8fc996775208be8"
+  version "0.5.0"
+  sha256 "4d69def3592781004d05c1533cc33e5ffa79a1ddf6311baae5358470b8eca0a2"
 
   url "https://github.com/danieljustus/symaira-cockpit/releases/download/v#{version}/Symaira-Cockpit-#{version}-macos.dmg"
   name "Symaira Cockpit"
