@@ -5,13 +5,13 @@
 class Symdesk < Formula
   desc "Local-first markdown vault workspace: CLI and MCP server"
   homepage "https://github.com/danieljustus/symaira-desktop"
-  version "0.11.0"
+  version "0.11.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danieljustus/symaira-desktop/releases/download/v0.11.0/symaira-desktop_0.11.0_darwin_amd64.tar.gz"
-      sha256 "677908c742a5ba67cba731ee6d43e9a5e6c87725fc82f6279f0acde9461852f1"
+      url "https://github.com/danieljustus/symaira-desktop/releases/download/v0.11.1/symaira-desktop_0.11.1_darwin_amd64.tar.gz"
+      sha256 "9f557091a74eecc4c9aeb0fb280130cc32fef1230d73ad5728f8f10f636dcc28"
 
       define_method(:install) do
         bin.install "symdesk"
@@ -19,8 +19,8 @@ class Symdesk < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-desktop/releases/download/v0.11.0/symaira-desktop_0.11.0_darwin_arm64.tar.gz"
-      sha256 "2afe3f8cc55d370dd55d85f0d82842538d07bb49fee4167e4a3d953d4da5eceb"
+      url "https://github.com/danieljustus/symaira-desktop/releases/download/v0.11.1/symaira-desktop_0.11.1_darwin_arm64.tar.gz"
+      sha256 "a515e2e8afd11cc3296a29dd7d4c0be18a79a1f52ea4cc7ac388f1f9d6e045db"
 
       define_method(:install) do
         bin.install "symdesk"
@@ -31,16 +31,16 @@ class Symdesk < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-desktop/releases/download/v0.11.0/symaira-desktop_0.11.0_linux_amd64.tar.gz"
-      sha256 "bb7ee1673ab8c1c3d4c4fe35e47aa5a42817a81e6f6648a30e47adafdebc6a8f"
+      url "https://github.com/danieljustus/symaira-desktop/releases/download/v0.11.1/symaira-desktop_0.11.1_linux_amd64.tar.gz"
+      sha256 "74f9b041d54b0af001aaf708ae47f21442ab0f8255341122e59ac9fe8046d209"
       define_method(:install) do
         bin.install "symdesk"
         bin.install "symroom"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-desktop/releases/download/v0.11.0/symaira-desktop_0.11.0_linux_arm64.tar.gz"
-      sha256 "92541c0fa6fadd970f8c51f5e15406e77cbd32b407aaff685d6cdc051d909c45"
+      url "https://github.com/danieljustus/symaira-desktop/releases/download/v0.11.1/symaira-desktop_0.11.1_linux_arm64.tar.gz"
+      sha256 "5d0a639896d6e47c16b31f7cff26e3c658bb5b80aad0e9c38a0d8cf10904ed66"
       define_method(:install) do
         bin.install "symdesk"
         bin.install "symroom"
