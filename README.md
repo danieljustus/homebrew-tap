@@ -1,5 +1,7 @@
 # Symaira Homebrew Tap
 
+[![Tap CI](https://github.com/danieljustus/homebrew-tap/actions/workflows/ci.yml/badge.svg)](https://github.com/danieljustus/homebrew-tap/actions/workflows/ci.yml)
+
 Release-only Homebrew tap for Symaira tools and macOS apps. This repository distributes immutable prebuilt release artifacts; it never builds Symaira software from source.
 
 ## Installation

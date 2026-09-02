@@ -1,0 +1,41 @@
+name: Tap CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate formulae and casks
+    runs-on: macos-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - name: Validate Ruby syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in Formula/*.rb Casks/*.rb; do
+            ruby -c "$file"
+          done
+
+      - name: Run strict Homebrew audit
+        shell: bash
+        env:
+          HOMEBREW_NO_AUTO_UPDATE: "1"
+          HOMEBREW_TAP_DIRS: ${{ runner.temp }}/tap
+        run: |
+          set -euo pipefail
+          tap_root="${RUNNER_TEMP}/tap/danieljustus/homebrew-tap"
+          mkdir -p "${tap_root}"
+          cp -R Formula Casks README.md AGENTS.md formula_renames.json "${tap_root}/"
+          brew audit --tap danieljustus/tap --strict

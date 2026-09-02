@@ -10,6 +10,7 @@ Standalone Homebrew tap under `danieljustus/tap`. It consumes immutable assets f
 
 ```
 homebrew-tap/
+├── .github/workflows/ci.yml   # Ruby syntax and strict tap audit
 ├── README.md                  # tap landing page and migration guide
 ├── formula_renames.json       # historical formula rename map
 ├── Formula/                   # CLI formulae
@@ -70,6 +71,8 @@ ruby -c Casks/symdesk-app.rb
 brew style Formula/symvault.rb Casks/symdesk-app.rb
 brew audit --tap danieljustus/tap --strict
 ```
+
+The repository-owned `Tap CI` workflow repeats the syntax and strict-audit checks on macOS.
 
 For a release update, verify the exact release asset and checksum before changing the formula/cask, then run representative formula tests. For `symdesk`, remember that the formula ships both `symdesk` and `symroom`; the standalone `symroom` formula is disabled.
 
