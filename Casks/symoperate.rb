@@ -3,7 +3,7 @@ cask "symoperate" do
   sha256 "4f0e02406728b3cef481a96019849cb2ad4b68c1f2d61b153b6387b11a1cdc0d"
 
   url "https://github.com/danieljustus/symaira-operate/releases/download/v#{version}/symoperate.dmg"
-  name "Symoperate"
+  name "Symaira Operate"
   desc "Native macOS desktop-automation MCP server"
   homepage "https://github.com/danieljustus/symaira-operate"
 

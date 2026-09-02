@@ -5,7 +5,6 @@
 class Symprint < Formula
   desc "Markdown → beautiful PDF via named use-case profiles (Typst engine)"
   homepage "https://github.com/danieljustus/symaira-print"
-  version "0.5.0"
   license "Apache-2.0"
 
   disable! date: "2026-08-24", because: "absorbed into symaira-desktop (symdesk)"

@@ -5,7 +5,6 @@
 class Symfritz < Formula
   desc "CLI to administer, analyse, and control an AVM FRITZ!Box"
   homepage "https://github.com/danieljustus/symaira-fritz"
-  version "0.6.0"
   license "Apache-2.0"
 
   on_macos do

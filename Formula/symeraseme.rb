@@ -4,7 +4,6 @@
 class Symeraseme < Formula
   desc "Automated GDPR/CCPA data broker removal CLI"
   homepage "https://github.com/danieljustus/symaira-eraseme"
-  version "0.12.1"
   license "Apache-2.0"
 
   on_macos do
