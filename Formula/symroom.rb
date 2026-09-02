@@ -2,6 +2,7 @@ class Symroom < Formula
   desc "Shared, verifiable work record for projects"
   homepage "https://github.com/danieljustus/symaira-room"
   license "Apache-2.0"
+  conflicts_with "symdesk", because: "symdesk includes the symroom binary"
 
   disable! date: "2026-08-24", because: "absorbed into symaira-desktop (symdesk)"
 
