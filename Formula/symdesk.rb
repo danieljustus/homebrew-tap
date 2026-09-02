@@ -5,8 +5,9 @@
 class Symdesk < Formula
   desc "Local-first markdown vault workspace: CLI and MCP server"
   homepage "https://github.com/danieljustus/symaira-desktop"
-  version "0.11.1"
   license "Apache-2.0"
+
+  conflicts_with "symroom", because: "symdesk includes the symroom binary"
 
   on_macos do
     if Hardware::CPU.intel?

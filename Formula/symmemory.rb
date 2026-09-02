@@ -5,7 +5,6 @@
 class Symmemory < Formula
   desc "Persistent memory layer and semantic knowledge base for AI agents"
   homepage "https://github.com/danieljustus/symaira-memory"
-  version "0.17.0"
   license "Apache-2.0"
 
   disable! date: "2026-08-24", because: "absorbed into symaira-brain (symbrain)"

@@ -5,7 +5,6 @@
 class Symguard < Formula
   desc "Local-first security gateway for AI agents and MCP servers"
   homepage "https://github.com/danieljustus/symaira-guard"
-  version "0.4.1"
   license "Apache-2.0"
 
   disable! date: "2026-08-24", because: "absorbed into symaira-brain (symbrain)"

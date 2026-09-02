@@ -3,7 +3,7 @@ cask "symskills" do
   sha256 "a26d9ba4013c687fbb7608c32f1a1291b950c2c9c52fb9446b78932d54344b05"
 
   url "https://github.com/danieljustus/symaira-skills/releases/download/v#{version}/Symskills.dmg"
-  name "Symskills"
+  name "Symaira Skills"
   desc "Portable Skill SSOT manager for local AI agent harnesses"
   homepage "https://github.com/danieljustus/symaira-skills"
 

@@ -5,7 +5,6 @@
 class Symvault < Formula
   desc "Modern CLI password manager with age encryption"
   homepage "https://github.com/danieljustus/symaira-vault"
-  version "0.21.1"
   license "Apache-2.0"
 
   on_macos do

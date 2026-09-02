@@ -5,7 +5,6 @@
 class Symseek < Formula
   desc "Local-first, CGO-free document retrieval for AI agents"
   homepage "https://github.com/danieljustus/symaira-seek"
-  version "2.6.1"
   license "Apache-2.0"
 
   disable! date: "2026-08-24", because: "absorbed into symaira-desktop (symdesk)"

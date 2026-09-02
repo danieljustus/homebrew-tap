@@ -5,7 +5,6 @@
 class Symscope < Formula
   desc "Cross-platform port inventory and MCP discovery tool for AI agents"
   homepage "https://github.com/danieljustus/symaira-scope"
-  version "0.4.1"
   license "Apache-2.0"
 
   disable! date: "2026-08-24", because: "absorbed into symaira-cockpit (symcockpit)"

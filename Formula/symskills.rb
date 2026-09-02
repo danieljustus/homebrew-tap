@@ -5,7 +5,6 @@
 class Symskills < Formula
   desc "Portable Skill SSOT manager for local AI agent harnesses"
   homepage "https://github.com/danieljustus/symaira-skills"
-  version "0.5.0"
   license "Apache-2.0"
 
   disable! date: "2026-08-24", because: "absorbed into symaira-brain (symbrain)"

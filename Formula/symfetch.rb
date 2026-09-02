@@ -5,7 +5,6 @@
 class Symfetch < Formula
   desc "AI-native web fetch engine for LLM agents"
   homepage "https://github.com/danieljustus/symaira-fetch"
-  version "0.5.0"
   license "Apache-2.0"
 
   disable! date: "2026-08-24", because: "absorbed into symaira-browse (symbrowse)"

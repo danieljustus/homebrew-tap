@@ -5,7 +5,6 @@
 class Symbrowse < Formula
   desc "Agent-operable browser automation over Chrome DevTools Protocol"
   homepage "https://github.com/danieljustus/symaira-browse"
-  version "0.6.1"
   license "Apache-2.0"
 
   on_macos do

@@ -5,7 +5,6 @@
 class Symingest < Formula
   desc "Document ingestion + OCR pipeline for the Symaira ecosystem"
   homepage "https://github.com/danieljustus/symaira-ingest"
-  version "0.12.1"
   license "Apache-2.0"
 
   disable! date: "2026-08-24", because: "absorbed into symaira-desktop (symdesk)"

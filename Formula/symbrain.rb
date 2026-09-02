@@ -5,7 +5,6 @@
 class Symbrain < Formula
   desc "Portable agent-context layer: one MCP gateway multiplexing vault, memory, and skills for AI harnesses"
   homepage "https://github.com/danieljustus/symaira-brain"
-  version "0.10.0"
   license "Apache-2.0"
 
   on_macos do
