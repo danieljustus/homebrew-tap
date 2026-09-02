@@ -1,6 +1,7 @@
 # Symaira Homebrew Tap
 
 [![Tap CI](https://github.com/danieljustus/homebrew-tap/actions/workflows/ci.yml/badge.svg)](https://github.com/danieljustus/homebrew-tap/actions/workflows/ci.yml)
+[![License: Apache-2.0](https://img.shields.io/github/license/danieljustus/homebrew-tap)](https://github.com/danieljustus/homebrew-tap/blob/main/LICENSE)
 
 Release-only Homebrew tap for Symaira tools and macOS apps. This repository distributes immutable prebuilt release artifacts; it never builds Symaira software from source.
 
@@ -112,4 +113,4 @@ Report vulnerabilities in the distributed Symaira products to the security conta
 
 ## License
 
-This repository currently has no repository-level `LICENSE` file. The `license` field in a formula describes the corresponding upstream binary; it does not grant a license for this tap itself.
+This repository is licensed under the [Apache License 2.0](LICENSE). The `license` field in each formula describes the corresponding upstream binary.
