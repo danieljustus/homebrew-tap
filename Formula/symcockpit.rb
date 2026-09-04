@@ -4,7 +4,7 @@
 class Symcockpit < Formula
   desc "This machine: thermals, power, GUI automation and port/MCP inventory"
   homepage "https://github.com/danieljustus/symaira-cockpit"
-  version "0.5.4"
+  version "0.5.5"
   license "Apache-2.0"
 
   # One universal binary rather than per-arch archives: symcockpit is
@@ -14,7 +14,7 @@ class Symcockpit < Formula
   depends_on macos: :sonoma
 
   url "https://github.com/danieljustus/symaira-cockpit/releases/download/v#{version}/symcockpit_#{version}_darwin_universal.tar.gz"
-  sha256 "1c82af73cfd4fb3a99647237c13bfa72a743446f46990269cbfc31a50728dd6f"
+  sha256 "1c1f4b8816af6a9803c9cecccb2ddd41dc1c758ba2917721cbd4b8887148e7d2"
 
   def install
     bin.install "symcockpit"
