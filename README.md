@@ -1,5 +1,7 @@
 # Symaira Homebrew Tap
 
+<p><img src="assets/symaira-homebrew-tap.svg" alt="Symaira Homebrew Tap" width="96" /></p>
+
 [![Tap CI](https://github.com/danieljustus/homebrew-tap/actions/workflows/ci.yml/badge.svg)](https://github.com/danieljustus/homebrew-tap/actions/workflows/ci.yml)
 [![License: Apache-2.0](https://img.shields.io/github/license/danieljustus/homebrew-tap)](https://github.com/danieljustus/homebrew-tap/blob/main/LICENSE)
 
