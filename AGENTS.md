@@ -1,5 +1,9 @@
 # homebrew-tap/ — Symaira Homebrew Distribution Tap
 
+## Current product contract
+
+[PB-2026-09-09](docs/product-boundaries.md) is the accepted target, not a release manifest. Browse and Operate become optional Brain modules; the standalone `symvault` CLI/service remains. The separate credential-management app is removed only after Brain UI parity and migration gates pass. Keep current formulae/casks and compatibility commands until real replacement artifacts, signatures/checksums, conflict handling and rollback are verified. Never deprecate an install path merely because the target architecture changed. Do not let managed runtime updates overwrite Homebrew-owned binaries.
+
 **Role**: Independent Git repository. Hosts Homebrew formulae and casks for released Symaira binaries and macOS apps.
 
 ## OVERVIEW
