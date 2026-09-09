@@ -1,5 +1,7 @@
 # Symaira Homebrew Tap
 
+> **Accepted product direction — implementation pending:** The accepted target consolidates Browse and Operate under Brain and moves normal credential management UI to Brain while preserving standalone symvault. Current formulae, casks and compatibility mappings below describe existing distribution, not completed target cutovers. Change them only after verified replacement release artifacts and migration/rollback support exist. See [PB-2026-09-09](docs/product-boundaries.md).
+
 <p><img src="assets/symaira-homebrew-tap.svg" alt="Symaira Homebrew Tap" width="96" /></p>
 
 [![Tap CI](https://github.com/danieljustus/homebrew-tap/actions/workflows/ci.yml/badge.svg)](https://github.com/danieljustus/homebrew-tap/actions/workflows/ci.yml)
