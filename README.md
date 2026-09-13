@@ -1,6 +1,6 @@
 # Symaira Homebrew Tap
 
-> **Accepted product direction — implementation pending:** The accepted target consolidates Browse and Operate under Brain and moves normal credential management UI to Brain while preserving standalone symvault. Current formulae, casks and compatibility mappings below describe existing distribution, not completed target cutovers. Change them only after verified replacement release artifacts and migration/rollback support exist. See [PB-2026-09-09](docs/product-boundaries.md).
+> **Current consolidation state (2026-09-13):** Browse, Operate and Scope source ownership has moved to optional modules in Symaira Brain; `symaira-browse` is archived and Cockpit is becoming tune-only. **No Brain-built module release artifacts exist yet.** This tap therefore continues to distribute only the historical tagged artifacts: `symbrowse` is deprecated, and the currently released `symcockpit` still contains legacy `operate`/`scope` routes until a later Cockpit release. Do not create formulae, casks, versions or checksums for Brain-built modules before signed release assets and migration/rollback support exist. See [PB-2026-09-09](docs/product-boundaries.md).
 
 <p><img src="assets/symaira-homebrew-tap.svg" alt="Symaira Homebrew Tap" width="96" /></p>
 
@@ -20,8 +20,7 @@ brew tap danieljustus/tap
 | Formula | Purpose | Install |
 |---|---|---|
 | `symbrain` | Agent context, memory, skills and policy gateway | `brew install symbrain` |
-| `symbrowse` | Agent-operated browser automation and web fetching | `brew install symbrowse` |
-| `symcockpit` | Local machine thermals, power, GUI automation and port inventory | `brew install symcockpit` |
+| `symcockpit` | Mac hardware/system tuning; current release artifacts retain legacy `operate`/`scope` routes until the next Cockpit release | `brew install symcockpit` |
 | `symdesk` | Local-first Markdown vault workspace, CLI and MCP server | `brew install symdesk` |
 | `symeraseme` | Automated data-broker removal CLI | `brew install symeraseme` |
 | `symfritz` | CLI for administering and analysing an AVM FRITZ!Box | `brew install symfritz` |
@@ -39,14 +38,15 @@ The CLI formula and macOS app cask use separate tokens when both install the sam
 
 ## Deprecated compatibility entries
 
-Deprecated entries remain in the tap so existing Homebrew installations have a recognizable migration path. They are disabled and are not recommendations for new installations.
+Deprecated entries remain in the tap so existing Homebrew installations have a recognizable migration path. Entries are disabled where their formula/cask says so; the deprecated `symbrowse` formula still installs the last historical release until a signed Brain-side replacement exists. None are recommendations for new installations.
 
 | Legacy entry | Replacement or decision |
 |---|---|
-| `symfetch` | `symbrowse` |
+| `symfetch` | `symbrowse` historical artifact; Browse source now belongs to Brain |
+| `symbrowse` | Deprecated: source moved to the optional Browse module in `symbrain`; historical v0.8.0 artifact remains until a signed Brain-side release exists |
 | `symguard`, `symmemory`, `symskills` and cask `symskills` | `symbrain` |
 | `symingest`, `symmeet`, `symprint`, `symroom`, `symseek` and casks `symingest`, `symmeet-agent` | `symdesk` where the capability is included; review capability-specific migration notes before uninstalling |
-| `symscope`, and casks `symoperate`, `symtune` | `symcockpit` |
+| `symscope`, and casks `symoperate`, `symtune` | Disabled legacy entries. Scope and Operate now live as optional Brain modules; Tune is Cockpit-owned. No Brain-side tap artifact exists yet. |
 | cask `symhub` | Discontinued; Symaira Desktop is the human-facing shell |
 
 The standalone `symroom` formula is disabled because `symdesk` ships the `symroom` binary since v0.10.0. If an old `symroom` installation blocks an upgrade:
@@ -92,13 +92,13 @@ Use `brew uninstall --zap --cask <name>` only when you also want Homebrew's docu
 - No entry uses `HEAD`, `main` or a source build.
 - Release updates must be made only after the upstream tag and all referenced assets exist.
 - Formula versions are derived by Homebrew from the versioned release URL; generated formulae must not add a redundant explicit `version` stanza.
-- Legacy upstream repositories are retained only as disabled compatibility stubs and must not be presented as maintained products.
+- Archived upstream repositories are retained only as disabled or deprecated compatibility entries and must not be presented as maintained products.
 
 ## Ecosystem
 
 - [Symaira](https://symaira.com)
 - [Symaira Brain](https://github.com/danieljustus/symaira-brain)
-- [Symaira Browse](https://github.com/danieljustus/symaira-browse)
+- [Symaira Browse (archived; source now in Brain)](https://github.com/danieljustus/symaira-browse)
 - [Symaira Cockpit](https://github.com/danieljustus/symaira-cockpit)
 - [Symaira Desktop](https://github.com/danieljustus/symaira-desktop)
 - [Symaira EraseMe](https://github.com/danieljustus/symaira-eraseme)
