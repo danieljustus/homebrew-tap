@@ -8,6 +8,8 @@ class Symbrowse < Formula
   version "0.8.0"
   license "Apache-2.0"
 
+  deprecate! date: "2026-09-13", because: "repo archived; Browse continues as an optional module in symaira-brain (brain-managed symbrowse)"
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/danieljustus/symaira-browse/releases/download/v0.8.0/symbrowse_0.8.0_darwin_amd64.tar.gz"
