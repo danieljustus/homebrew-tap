@@ -1,10 +1,10 @@
 cask "symcockpit" do
-  version "0.6.2"
-  sha256 "1e8e71a4a5e202a3a63f36f691c1fda001337558feceb713d47450751f652cf8"
+  version "0.7.0"
+  sha256 "a7fd1c47e2a7f3403a9350f228f6e1ecd24941f047d999dd5cd3d0950d182c3d"
 
   url "https://github.com/danieljustus/symaira-cockpit/releases/download/v#{version}/Symaira-Cockpit-#{version}-macos.dmg"
   name "Symaira Cockpit"
-  desc "macOS hardware and system tuning: thermals, power, display, brightness"
+  desc "This machine: thermals, power, display and system tuning"
   homepage "https://github.com/danieljustus/symaira-cockpit"
 
   livecheck do

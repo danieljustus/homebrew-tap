@@ -2,9 +2,9 @@
 # frozen_string_literal: true
 
 class Symcockpit < Formula
-  desc "macOS hardware and system tuning: thermals, power, display, brightness"
+  desc "This machine: thermals, power, display and system tuning"
   homepage "https://github.com/danieljustus/symaira-cockpit"
-  version "0.6.2"
+  version "0.7.0"
   license "Apache-2.0"
 
   # One universal binary rather than per-arch archives: symcockpit is
@@ -14,7 +14,7 @@ class Symcockpit < Formula
   depends_on macos: :sonoma
 
   url "https://github.com/danieljustus/symaira-cockpit/releases/download/v#{version}/symcockpit_#{version}_darwin_universal.tar.gz"
-  sha256 "da58e74be5a249d82193eacae814c8ee5aeae121d85c7596828c5fc8a4f75344"
+  sha256 "46c64cbcd19f41a05f1c8feadf94ee51b3df44629008bbd00975c6e2b310c866"
 
   def install
     bin.install "symcockpit"
@@ -22,19 +22,10 @@ class Symcockpit < Formula
 
   def caveats
     <<~EOS
-      symcockpit provides the tune command tree (thermals, power, display,
-      brightness):
-
-        symcockpit tune <command>
-        symcockpit <command>        (most tune commands also work unprefixed)
-
-      operate and scope moved to Symaira Brain as optional modules; install
-      them from a Brain checkout:
-
-        symbrain setup --from-source <brain-checkout> --modules operate,scope
-
-      The menu bar app is distributed separately:
-      brew install --cask danieljustus/tap/symcockpit
+      symcockpit provides the tune command tree. Operate and Scope are
+      optional modules in Symaira Brain; legacy dispatcher commands are removed.
+      The menu bar app
+      is distributed separately: brew install --cask danieljustus/tap/symcockpit
     EOS
   end
 
