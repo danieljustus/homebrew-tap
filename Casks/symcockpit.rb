@@ -4,7 +4,7 @@ cask "symcockpit" do
 
   url "https://github.com/danieljustus/symaira-cockpit/releases/download/v#{version}/Symaira-Cockpit-#{version}-macos.dmg"
   name "Symaira Cockpit"
-  desc "This machine: thermals, power, GUI automation and port/MCP inventory"
+  desc "macOS hardware and system tuning: thermals, power, display, brightness"
   homepage "https://github.com/danieljustus/symaira-cockpit"
 
   livecheck do

@@ -7,7 +7,7 @@ class Symscope < Formula
   homepage "https://github.com/danieljustus/symaira-scope"
   license "Apache-2.0"
 
-  disable! date: "2026-08-24", because: "absorbed into symaira-cockpit (symcockpit)"
+  disable! date: "2026-08-24", because: "source moved to Symaira Brain as the optional scope module"
 
   on_macos do
     if Hardware::CPU.intel?

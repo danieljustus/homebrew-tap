@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 class Symcockpit < Formula
-  desc "This machine: thermals, power, GUI automation and port/MCP inventory"
+  desc "macOS hardware and system tuning: thermals, power, display, brightness"
   homepage "https://github.com/danieljustus/symaira-cockpit"
   version "0.6.2"
   license "Apache-2.0"
@@ -22,15 +22,19 @@ class Symcockpit < Formula
 
   def caveats
     <<~EOS
-      symcockpit replaces symtune, symoperate and symscope:
+      symcockpit provides the tune command tree (thermals, power, display,
+      brightness):
 
-        symcockpit tune <command>       (was: symtune)
-        symcockpit operate <command>    (was: symoperate)
-        symcockpit scope <command>      (was: symscope)
+        symcockpit tune <command>
+        symcockpit <command>        (most tune commands also work unprefixed)
 
-      operate needs Accessibility and Screen Recording permissions; grant them
-      in System Settings > Privacy & Security on first use. The menu bar app
-      is distributed separately: brew install --cask danieljustus/tap/symcockpit
+      operate and scope moved to Symaira Brain as optional modules; install
+      them from a Brain checkout:
+
+        symbrain setup --from-source <brain-checkout> --modules operate,scope
+
+      The menu bar app is distributed separately:
+      brew install --cask danieljustus/tap/symcockpit
     EOS
   end
 
