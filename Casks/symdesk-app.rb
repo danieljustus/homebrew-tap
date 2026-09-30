@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 cask "symdesk-app" do
   version "0.12.2"
   sha256 "0ab8f6d8d5d9e3de4163f53314dd78ef5db96fa0a4feb76ef9da31a169ed5fb6"
@@ -19,7 +21,7 @@ cask "symdesk-app" do
 
   zap trash: [
     "~/Library/Application Support/SymDesk",
-    "~/Library/Preferences/com.symaira.desktop.plist",
     "~/Library/Caches/com.symaira.desktop",
+    "~/Library/Preferences/com.symaira.desktop.plist",
   ]
 end

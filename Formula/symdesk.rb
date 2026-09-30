@@ -5,7 +5,6 @@
 class Symdesk < Formula
   desc "Local-first markdown vault workspace: CLI and MCP server"
   homepage "https://github.com/danieljustus/symaira-desktop"
-  version "0.12.2"
   license "Apache-2.0"
 
   on_macos do
@@ -47,6 +46,8 @@ class Symdesk < Formula
       end
     end
   end
+
+  conflicts_with "danieljustus/tap/symroom", because: "both install the symroom binary"
 
   test do
     system "#{bin}/symdesk", "version"

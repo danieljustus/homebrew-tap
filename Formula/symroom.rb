@@ -1,9 +1,10 @@
+# frozen_string_literal: true
+
+# Disabled compatibility formula for the CLI now shipped by symdesk.
 class Symroom < Formula
   desc "Shared, verifiable work record for projects"
   homepage "https://github.com/danieljustus/symaira-room"
   license "Apache-2.0"
-  conflicts_with "symdesk", because: "symdesk includes the symroom binary"
-
   disable! date: "2026-08-24", because: "absorbed into symaira-desktop (symdesk)"
 
   on_macos do
@@ -15,6 +16,8 @@ class Symroom < Formula
       sha256 "830ede9834b04c7aef8f40911e054e840ebe4e68e07862821487929807fbc92a"
     end
   end
+
+  conflicts_with "danieljustus/tap/symdesk", because: "symdesk includes the symroom binary"
 
   def install
     bin.install "symroom"

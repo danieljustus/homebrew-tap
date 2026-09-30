@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 cask "symcockpit" do
   version "0.7.0"
   sha256 "a7fd1c47e2a7f3403a9350f228f6e1ecd24941f047d999dd5cd3d0950d182c3d"

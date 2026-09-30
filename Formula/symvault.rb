@@ -5,8 +5,8 @@
 class Symvault < Formula
   desc "Modern CLI password manager with age encryption"
   homepage "https://github.com/danieljustus/symaira-vault"
-  version "0.22.1"
   license "Apache-2.0"
+  version_scheme 1
 
   on_macos do
     if Hardware::CPU.intel?
@@ -51,8 +51,6 @@ class Symvault < Formula
       end
     end
   end
-
-  version_scheme 1
 
   def caveats
     <<~EOS

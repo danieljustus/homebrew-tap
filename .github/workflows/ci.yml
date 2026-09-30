@@ -37,10 +37,9 @@ jobs:
         shell: bash
         env:
           HOMEBREW_NO_AUTO_UPDATE: "1"
-          HOMEBREW_TAP_DIRS: ${{ runner.temp }}/tap
         run: |
           set -euo pipefail
-          tap_root="${RUNNER_TEMP}/tap/danieljustus/homebrew-tap"
+          tap_root="$(brew --taps)/danieljustus/homebrew-tap"
           mkdir -p "${tap_root}"
           cp -R Formula Casks README.md AGENTS.md formula_renames.json "${tap_root}/"
           brew audit --tap danieljustus/tap --strict
