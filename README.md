@@ -1,6 +1,6 @@
 # Symaira Homebrew Tap
 
-> **Current consolidation state (2026-09-13):** Browse, Operate and Scope source ownership has moved to optional modules in Symaira Brain; `symaira-browse` is archived and Cockpit is becoming tune-only. **No Brain-built module release artifacts exist yet.** This tap therefore continues to distribute only the historical tagged artifacts: `symbrowse` is deprecated, and the currently released `symcockpit` still contains legacy `operate`/`scope` routes until a later Cockpit release. Do not create formulae, casks, versions or checksums for Brain-built modules before signed release assets and migration/rollback support exist. See [PB-2026-09-09](docs/product-boundaries.md).
+> **Current consolidation state (2026-09-30):** Browse, Operate and Scope source ownership has moved to optional modules in Symaira Brain; the `symaira-browse` repository no longer resolves on GitHub and Cockpit is tune-only. **No Brain-built module release artifacts exist yet.** This tap therefore continues to distribute only the historical tagged artifacts: `symbrowse` is deprecated and its v0.8.0 assets are no longer retrievable, so installing it fails with HTTP 404 (tracked in #33), and the released `symcockpit` v0.7.0 no longer contains `operate`/`scope` routes — those command families answer with a migration hint pointing at Symaira Brain. Do not create formulae, casks, versions or checksums for Brain-built modules before signed release assets and migration/rollback support exist. See [PB-2026-09-09](docs/product-boundaries.md).
 
 <p><img src="assets/symaira-homebrew-tap.svg" alt="Symaira Homebrew Tap" width="96" /></p>
 
@@ -20,7 +20,7 @@ brew tap danieljustus/tap
 | Formula | Purpose | Install |
 |---|---|---|
 | `symbrain` | Agent context, memory, skills and policy gateway | `brew install symbrain` |
-| `symcockpit` | Mac hardware/system tuning; current release artifacts retain legacy `operate`/`scope` routes until the next Cockpit release | `brew install symcockpit` |
+| `symcockpit` | Mac hardware/system tuning; v0.7.0 and later are tune-only — `operate` and `scope` moved to optional Symaira Brain modules | `brew install symcockpit` |
 | `symdesk` | Local-first Markdown vault workspace, CLI and MCP server | `brew install symdesk` |
 | `symeraseme` | Automated data-broker removal CLI | `brew install symeraseme` |
 | `symfritz` | CLI for administering and analysing an AVM FRITZ!Box | `brew install symfritz` |
@@ -38,12 +38,12 @@ The CLI formula and macOS app cask use separate tokens when both install the sam
 
 ## Deprecated compatibility entries
 
-Deprecated entries remain in the tap so existing Homebrew installations have a recognizable migration path. Entries are disabled where their formula/cask says so; the deprecated `symbrowse` formula still installs the last historical release until a signed Brain-side replacement exists. None are recommendations for new installations.
+Deprecated entries remain in the tap so existing Homebrew installations have a recognizable migration path. Entries are disabled where their formula/cask says so; the deprecated `symbrowse` formula is still offered, but its upstream repository and v0.8.0 assets no longer resolve, so installation fails with HTTP 404 (tracked in #33). None are recommendations for new installations.
 
 | Legacy entry | Replacement or decision |
 |---|---|
-| `symfetch` | `symbrowse` historical artifact; Browse source now belongs to Brain |
-| `symbrowse` | Deprecated: source moved to the optional Browse module in `symbrain`; historical v0.8.0 artifact remains until a signed Brain-side release exists |
+| `symfetch` | `symbrowse` historical artifact (no longer retrievable, #33); Browse source now belongs to Brain |
+| `symbrowse` | Deprecated: source moved to the optional Browse module in `symbrain`; the historical v0.8.0 artifact and its upstream repository no longer resolve (#33) |
 | `symguard`, `symmemory`, `symskills` and cask `symskills` | `symbrain` |
 | `symingest`, `symmeet`, `symprint`, `symroom`, `symseek` and casks `symingest`, `symmeet-agent` | `symdesk` where the capability is included; review capability-specific migration notes before uninstalling |
 | `symscope`, and casks `symoperate`, `symtune` | Disabled legacy entries. Scope and Operate now live as optional Brain modules; Tune is Cockpit-owned. No Brain-side tap artifact exists yet. |
@@ -98,7 +98,7 @@ Use `brew uninstall --zap --cask <name>` only when you also want Homebrew's docu
 
 - [Symaira](https://symaira.com)
 - [Symaira Brain](https://github.com/danieljustus/symaira-brain)
-- [Symaira Browse (archived; source now in Brain)](https://github.com/danieljustus/symaira-browse)
+- Symaira Browse (repository removed; source now in Brain)
 - [Symaira Cockpit](https://github.com/danieljustus/symaira-cockpit)
 - [Symaira Desktop](https://github.com/danieljustus/symaira-desktop)
 - [Symaira EraseMe](https://github.com/danieljustus/symaira-eraseme)
