@@ -9,6 +9,7 @@ Continue the code and integration work from the published repository, without ne
 - Base code commit before this document/checkpoint: `4f13c793504e72e04100b2419634d2baeff06e23`.
 - Working directory for every command below: the checked-out repository root.
 - Publication does not authorize a merge, release, tag, destructive cleanup or paid service.
+- Continuation draft PR: #38. Keep it draft until its code/acceptance gates are independently satisfied.
 
 PR #36 was merged at 4f13c793504e72e04100b2419634d2baeff06e23. Exact post-merge CI run 36763892036 succeeded; issues #35 and #37 were closed. Earlier work inspected 26 tracked Ruby files. Legacy style and Browse #33 are separate unresolved work.
 
@@ -70,7 +71,13 @@ Prepublication secret-pattern/outgoing-history scans succeeded for the selected 
 
 No new source code was changed on this branch; the fresh remote-clone command results will be recorded below.
 
-Fresh remote-clone verification: pending publication and replay. Target cloud runtime, permissions, secrets and network gates: **not checked**.
+Fresh remote-clone verification was executed locally on macOS at published checkpoint `eb1cf8802858f8505be7293e1f1b163f0fd83541`. The repository was cloned directly from GitHub, without copied worktree files, stashes or source/configuration overrides. The following scoped command chain exited **0**:
+
+```sh
+python3 -c "import subprocess; fs=subprocess.check_output(['git','ls-files','--','Formula/*.rb','Casks/*.rb'],text=True).splitlines(); assert fs; [subprocess.run(['ruby','-c',p],check=True) for p in fs]; print('Ruby files checked:',len(fs))"
+```
+
+Rust compilation used two jobs, disabled dev/test debug info and a distinct build-output directory for each variant. Those output directories contained no required source or fixture inputs. Package manager dependency caches were allowed; application state and credentials were not supplied. This verifies repository-contained inputs and these scoped checks, not every product test or native acceptance criterion. Final documentation changes do not change the tested source; the published final HEAD must still be verified before continuation. Target cloud runtime, permissions, secrets and network gates: **not checked**.
 
 ## Copyable continuation request
 
