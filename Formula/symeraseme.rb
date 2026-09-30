@@ -1,6 +1,7 @@
 # typed: false
 # frozen_string_literal: true
 
+# Prebuilt Symaira EraseMe CLI.
 class Symeraseme < Formula
   desc "Automated GDPR/CCPA data broker removal CLI"
   homepage "https://github.com/danieljustus/symaira-eraseme"

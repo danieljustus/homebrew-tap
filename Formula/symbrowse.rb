@@ -5,10 +5,9 @@
 class Symbrowse < Formula
   desc "Agent-operable browser automation over Chrome DevTools Protocol"
   homepage "https://github.com/danieljustus/symaira-browse"
-  version "0.8.0"
   license "Apache-2.0"
 
-  deprecate! date: "2026-09-13", because: "repo archived; Browse continues as an optional module in symaira-brain (brain-managed symbrowse)"
+  deprecate! date: "2026-09-13", because: "repo archived; Browse continues as an optional symaira-brain module"
 
   on_macos do
     if Hardware::CPU.intel?

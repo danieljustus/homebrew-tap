@@ -1,10 +1,12 @@
 # typed: false
 # frozen_string_literal: true
 
+# Prebuilt universal CLI for Symaira Cockpit.
 class Symcockpit < Formula
   desc "This machine: thermals, power, display and system tuning"
   homepage "https://github.com/danieljustus/symaira-cockpit"
-  version "0.7.0"
+  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v0.7.0/symcockpit_0.7.0_darwin_universal.tar.gz"
+  sha256 "46c64cbcd19f41a05f1c8feadf94ee51b3df44629008bbd00975c6e2b310c866"
   license "Apache-2.0"
 
   # One universal binary rather than per-arch archives: symcockpit is
@@ -12,9 +14,6 @@ class Symcockpit < Formula
   # Linux leg to split on, and `swift build --arch arm64 --arch x86_64`
   # produces a single artifact for both Macs.
   depends_on macos: :sonoma
-
-  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v#{version}/symcockpit_#{version}_darwin_universal.tar.gz"
-  sha256 "46c64cbcd19f41a05f1c8feadf94ee51b3df44629008bbd00975c6e2b310c866"
 
   def install
     bin.install "symcockpit"
