@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 cask "symcockpit" do
-  version "0.7.0"
-  sha256 "a7fd1c47e2a7f3403a9350f228f6e1ecd24941f047d999dd5cd3d0950d182c3d"
+  version "0.8.0"
+  sha256 "589e87a087991a4e72b1055d6457d91b3e3eb57a7e31976726351ecc36ec4a9e"
 
   url "https://github.com/danieljustus/symaira-cockpit/releases/download/v#{version}/Symaira-Cockpit-#{version}-macos.dmg"
   name "Symaira Cockpit"
@@ -15,7 +15,7 @@ cask "symcockpit" do
     regex(/Symaira-Cockpit-(\d+(?:\.\d+)*)-macos\.dmg/i)
   end
 
-  depends_on macos: :sonoma
+  depends_on macos: :tahoe
 
   app "Symaira Cockpit.app"
 
