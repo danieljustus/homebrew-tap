@@ -5,15 +5,15 @@
 class Symcockpit < Formula
   desc "This machine: thermals, power, display and system tuning"
   homepage "https://github.com/danieljustus/symaira-cockpit"
-  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v0.7.0/symcockpit_0.7.0_darwin_universal.tar.gz"
-  sha256 "46c64cbcd19f41a05f1c8feadf94ee51b3df44629008bbd00975c6e2b310c866"
+  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v0.8.0/symcockpit_0.8.0_darwin_universal.tar.gz"
+  sha256 "7980495fa68a50db515125534dd139551a1beb2f54141aaffd5af6bc19a15d2f"
   license "Apache-2.0"
 
   # One universal binary rather than per-arch archives: symcockpit is
   # macOS-only (AppKit/IOKit/Accessibility/ScreenCaptureKit), so there is no
   # Linux leg to split on, and `swift build --arch arm64 --arch x86_64`
   # produces a single artifact for both Macs.
-  depends_on macos: :sonoma
+  depends_on macos: :tahoe
 
   def install
     bin.install "symcockpit"
