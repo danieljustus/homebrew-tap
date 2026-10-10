@@ -1,12 +1,11 @@
 # typed: false
 # frozen_string_literal: true
 
-# Prebuilt universal CLI for Symaira Cockpit.
 class Symcockpit < Formula
   desc "This machine: thermals, power, display and system tuning"
   homepage "https://github.com/danieljustus/symaira-cockpit"
-  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v0.8.0/symcockpit_0.8.0_darwin_universal.tar.gz"
-  sha256 "7980495fa68a50db515125534dd139551a1beb2f54141aaffd5af6bc19a15d2f"
+  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v0.8.1/symcockpit_0.8.1_darwin_universal.tar.gz"
+  sha256 "b5b3007ecb7ef88312115d2c646fe75054fc9f0061e905a7c89b1365f4228bb0"
   license "Apache-2.0"
 
   # One universal binary rather than per-arch archives: symcockpit is
