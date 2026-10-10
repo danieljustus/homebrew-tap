@@ -1,7 +1,6 @@
 # typed: false
 # frozen_string_literal: true
 
-# Prebuilt Symaira EraseMe CLI.
 class Symeraseme < Formula
   desc "Automated GDPR/CCPA data broker removal CLI"
   homepage "https://github.com/danieljustus/symaira-eraseme"
@@ -9,21 +8,21 @@ class Symeraseme < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-eraseme/releases/download/v0.12.1/symeraseme_0.12.1_darwin_arm64.tar.gz"
-      sha256 "7fa696829c9bf861ba902a65576d22013e4eeeb655150143975f961078dc906b"
+      url "https://github.com/danieljustus/symaira-eraseme/releases/download/v0.14.1/symeraseme_0.14.1_darwin_arm64.tar.gz"
+      sha256 "d7aa3f52ede034d7187a4a4d663d6a62e74e68f5cf0ce86e266d77b286b19316"
     else
-      url "https://github.com/danieljustus/symaira-eraseme/releases/download/v0.12.1/symeraseme_0.12.1_darwin_amd64.tar.gz"
-      sha256 "3ff650cc1cab17e23f1c7264006b21b43d5e23a67ee6783daba84e39357869a1"
+      url "https://github.com/danieljustus/symaira-eraseme/releases/download/v0.14.1/symeraseme_0.14.1_darwin_amd64.tar.gz"
+      sha256 "d3d67bfa8b78c2ee1605c80dd0c563726b7f837100c7b198141934f3248172d8"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-eraseme/releases/download/v0.12.1/symeraseme_0.12.1_linux_arm64.tar.gz"
-      sha256 "02613a59bd88657c436ee8d748f33cc0910ec0cafb07cd238f3e1fd520e74dfd"
+      url "https://github.com/danieljustus/symaira-eraseme/releases/download/v0.14.1/symeraseme_0.14.1_linux_arm64.tar.gz"
+      sha256 "5a489ee7f75e25552271786eaf900af577a4235f2c71e4955071c1306506cd35"
     else
-      url "https://github.com/danieljustus/symaira-eraseme/releases/download/v0.12.1/symeraseme_0.12.1_linux_amd64.tar.gz"
-      sha256 "f64bc2d8456f3e9b7e66763e4f90dc42b43c526df61593e228676a2663d43d15"
+      url "https://github.com/danieljustus/symaira-eraseme/releases/download/v0.14.1/symeraseme_0.14.1_linux_amd64.tar.gz"
+      sha256 "be449fd4ec53ecc830a5e46444d9273bca27c9c6ccc7418a432e6bd816553054"
     end
   end
 
@@ -32,6 +31,6 @@ class Symeraseme < Formula
   end
 
   test do
-    system "#{bin}/symeraseme", "version"
+    system bin/"symeraseme", "version"
   end
 end
