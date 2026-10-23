@@ -2,7 +2,7 @@
 
 > **Current consolidation state (2026-09-30):** Browse, Operate and Scope source ownership has moved to optional modules in Symaira Brain; the `symaira-browse` repository no longer resolves on GitHub and Cockpit is tune-only. **No Brain-built module release artifacts exist yet.** This tap therefore continues to distribute only the historical tagged artifacts: `symbrowse` is deprecated and its v0.8.0 assets are no longer retrievable, so installing it fails with HTTP 404 (tracked in #33), and the released `symcockpit` v0.7.0 no longer contains `operate`/`scope` routes — those command families answer with a migration hint pointing at Symaira Brain. Do not create formulae, casks, versions or checksums for Brain-built modules before signed release assets and migration/rollback support exist. See [PB-2026-09-09](docs/product-boundaries.md).
 
-<p><img src="assets/symaira-homebrew-tap.svg" alt="Symaira Homebrew Tap" width="96" /></p>
+![Symaira Homebrew Tap](docs/assets/social-preview.png)
 
 [![Tap CI](https://github.com/danieljustus/homebrew-tap/actions/workflows/ci.yml/badge.svg)](https://github.com/danieljustus/homebrew-tap/actions/workflows/ci.yml)
 [![License: Apache-2.0](https://img.shields.io/github/license/danieljustus/homebrew-tap)](https://github.com/danieljustus/homebrew-tap/blob/main/LICENSE)
