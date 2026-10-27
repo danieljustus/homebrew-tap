@@ -4,8 +4,8 @@
 class Symcockpit < Formula
   desc "This machine: thermals, power, display and system tuning"
   homepage "https://github.com/danieljustus/symaira-cockpit"
-  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v0.8.1/symcockpit_0.8.1_darwin_universal.tar.gz"
-  sha256 "b5b3007ecb7ef88312115d2c646fe75054fc9f0061e905a7c89b1365f4228bb0"
+  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v0.9.0/symcockpit_0.9.0_darwin_universal.tar.gz"
+  sha256 "a828214f873b477cf8f6fb82d967a815631a4a400ea62a501568d734576a88e2"
   license "Apache-2.0"
 
   # One universal binary rather than per-arch archives: symcockpit is
@@ -20,7 +20,7 @@ class Symcockpit < Formula
 
   def caveats
     <<~EOS
-      symcockpit provides the tune command tree. Operate and Scope are
+      symcockpit covers hardware and system tuning. Operate and Scope are
       optional modules in Symaira Brain; legacy dispatcher commands are removed.
       The menu bar app
       is distributed separately: brew install --cask danieljustus/tap/symcockpit
