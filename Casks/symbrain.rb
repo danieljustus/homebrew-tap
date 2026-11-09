@@ -1,12 +1,10 @@
-# frozen_string_literal: true
-
 cask "symbrain" do
-  version "0.12.0"
-  sha256 "462b96413f03efdd4f34c728342cb1ca818c45cf442cb3ab163b3ee84f3c9bcf"
+  version "0.13.0"
+  sha256 "69f650df7cc4094ac53de75e1d1644d2ad40f0033268010c4d763e40fd77768a"
 
   url "https://github.com/danieljustus/symaira-brain/releases/download/v#{version}/Symaira-Brain-#{version}-macos.dmg"
   name "Symaira Brain"
-  desc "Portable agent context with an MCP gateway for vault, memory, and skills"
+  desc "Portable agent-context layer: one MCP gateway multiplexing vault, memory, and skills for AI harnesses"
   homepage "https://github.com/danieljustus/symaira-brain"
 
   livecheck do
@@ -21,7 +19,7 @@ cask "symbrain" do
 
   zap trash: [
     "~/Library/Application Support/Symaira Brain",
-    "~/Library/Caches/com.symaira.brain",
     "~/Library/Preferences/com.symaira.brain.plist",
+    "~/Library/Caches/com.symaira.brain",
   ]
 end
