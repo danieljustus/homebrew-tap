@@ -42,4 +42,6 @@ jobs:
           tap_root="$(brew --taps)/danieljustus/homebrew-tap"
           mkdir -p "${tap_root}"
           cp -R Formula Casks README.md AGENTS.md formula_renames.json "${tap_root}/"
+          # Homebrew refuses to load formulae from untrusted non-official taps.
+          brew trust --tap danieljustus/tap
           brew audit --tap danieljustus/tap --strict
