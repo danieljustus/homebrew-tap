@@ -14,19 +14,19 @@ class Symvault < Formula
   on_macos do
     depends_on arch: :arm64
     on_arm do
-      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.24.0/symaira-vault_0.24.0_darwin_arm64.tar.gz"
-      sha256 "944fa25f2e43e4371d9a8bc15902be875510b0b3f9f6d0c5b02aa18acb00935a"
+      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.24.1/symaira-vault_0.24.1_darwin_arm64.tar.gz"
+      sha256 "fb021430ea9ed14c9e9d6b1d048a32513c1dedf65c24fd7f4598d89afdb1aeea"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.24.0/symaira-vault_0.24.0_linux_amd64.tar.gz"
-      sha256 "f9b68b5cfd0ad4981f2b67d755d37fb06b5624187330fa4834c998ddb139d11f"
+      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.24.1/symaira-vault_0.24.1_linux_amd64.tar.gz"
+      sha256 "368be53e3d9d3add6c546298eb91c062966a2e51724bbc9d5b79d0c726524827"
     end
     on_arm do
-      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.24.0/symaira-vault_0.24.0_linux_arm64.tar.gz"
-      sha256 "4ad5569041cfc250c3540b880177001f5c9e9f52f7d27250bc5e316c09acd990"
+      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.24.1/symaira-vault_0.24.1_linux_arm64.tar.gz"
+      sha256 "b795081bfaa95e7a25b6c8bb7530994309c89b14dccb2025e00a796b277b7c54"
     end
   end
 
