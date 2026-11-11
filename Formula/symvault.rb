@@ -8,25 +8,25 @@ class Symvault < Formula
   license "Apache-2.0"
   version_scheme 1
 
+  # git is a hard runtime dependency (docs/adr/0033-git-binary-runtime-dependency.md).
+  depends_on "git"
+
   on_macos do
-    on_intel do
-      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.23.2/symaira-vault_0.23.2_darwin_amd64.tar.gz"
-      sha256 "80c3a6312c596e469fc133cab7d14709feb8a1f4adbab6de6525b7405fd01147"
-    end
+    depends_on arch: :arm64
     on_arm do
-      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.23.2/symaira-vault_0.23.2_darwin_arm64.tar.gz"
-      sha256 "a996399fac3a8f6765ab370412aa098f5162c357b45fda0908c021d3cb3fc43c"
+      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.24.0/symaira-vault_0.24.0_darwin_arm64.tar.gz"
+      sha256 "944fa25f2e43e4371d9a8bc15902be875510b0b3f9f6d0c5b02aa18acb00935a"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.23.2/symaira-vault_0.23.2_linux_amd64.tar.gz"
-      sha256 "a5abe9e440013d4891b545a2abd4f26bb1b823c8f1ff8c7c63529227447b5655"
+      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.24.0/symaira-vault_0.24.0_linux_amd64.tar.gz"
+      sha256 "f9b68b5cfd0ad4981f2b67d755d37fb06b5624187330fa4834c998ddb139d11f"
     end
     on_arm do
-      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.23.2/symaira-vault_0.23.2_linux_arm64.tar.gz"
-      sha256 "03372d509e76b0d0ef960ff4799d3790ef25f24a4b55dcb9e5979618f485cdc4"
+      url "https://github.com/danieljustus/symaira-vault/releases/download/v0.24.0/symaira-vault_0.24.0_linux_arm64.tar.gz"
+      sha256 "4ad5569041cfc250c3540b880177001f5c9e9f52f7d27250bc5e316c09acd990"
     end
   end
 
@@ -53,6 +53,17 @@ class Symvault < Formula
   end
 
   test do
-    system bin/"symvault", "version"
+    assert_match version.to_s, shell_output("#{bin}/symvault version")
+
+    # Real vault round trip in an isolated vault dir (the default location is
+    # platform specific, so pin it with SYMVAULT_VAULT and assert the files).
+    ENV["SYMVAULT_VAULT"] = (testpath/"vault").to_s
+    ENV["SYMVAULT_ALLOW_ENV_PASSPHRASE"] = "1"
+    ENV["SYMVAULT_PASSPHRASE"] = "brew-test-passphrase-123"
+    system bin/"symvault", "init"
+    assert_path_exists testpath/"vault/identity.age"
+    pipe_output("#{bin}/symvault set brew.password --stdin-value", "Xk9-brew-Battery\n")
+    assert_path_exists testpath/"vault/entries/brew.age"
+    assert_equal "Xk9-brew-Battery", shell_output("#{bin}/symvault get brew.password").strip
   end
 end
