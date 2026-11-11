@@ -4,8 +4,8 @@
 class Symcockpit < Formula
   desc "This machine: thermals, power, display and system tuning"
   homepage "https://github.com/danieljustus/symaira-cockpit"
-  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v0.10.2/symcockpit_0.10.2_darwin_universal.tar.gz"
-  sha256 "2bdcbf780b1d2ce39c659b886f90bf87a430181e1fdb4af21ad8bb08a7c9caed"
+  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v0.11.0/symcockpit_0.11.0_darwin_universal.tar.gz"
+  sha256 "7e14e93a516dda73b286dc68360ce49616fb4ce7b0a6c608efcebf15a53ae07b"
   license "Apache-2.0"
 
   # One universal binary rather than per-arch archives: symcockpit is
