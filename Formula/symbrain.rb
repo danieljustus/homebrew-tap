@@ -9,8 +9,8 @@ class Symbrain < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-brain/releases/download/v0.13.2/symbrain_0.13.2_darwin_arm64.tar.gz"
-      sha256 "b9e769eb7fdf2e6ff8b4975e2cb0319f35b8e40f5061f8af8c2a0b5ae6f76d11"
+      url "https://github.com/danieljustus/symaira-brain/releases/download/v0.14.0/symbrain_0.14.0_darwin_arm64.tar.gz"
+      sha256 "59fa550cff87ab25e547d1215a021b362dc7eb10531f8c9f75fc7695f65c4f38"
 
       define_method(:install) do
         bin.install "symbrain"
@@ -20,15 +20,15 @@ class Symbrain < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-brain/releases/download/v0.13.2/symbrain_0.13.2_linux_amd64.tar.gz"
-      sha256 "b6325103b362ec87c7fe626033ce5b843ea43e0a172f7089a2024ad87c06b04a"
+      url "https://github.com/danieljustus/symaira-brain/releases/download/v0.14.0/symbrain_0.14.0_linux_amd64.tar.gz"
+      sha256 "0a75295e050e588563cddf4f05968658240e391cb9410007f897b51fc7f0b056"
       define_method(:install) do
         bin.install "symbrain"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-brain/releases/download/v0.13.2/symbrain_0.13.2_linux_arm64.tar.gz"
-      sha256 "80e5c802217ffbdf99d25207ec9fbbe86bb239f3f66ba7c462b73ff7a4dd8f3e"
+      url "https://github.com/danieljustus/symaira-brain/releases/download/v0.14.0/symbrain_0.14.0_linux_arm64.tar.gz"
+      sha256 "0f9b317d0ec52535a43a140e8e1dd7d29493cdb44d957ccf690c483f810c7a02"
       define_method(:install) do
         bin.install "symbrain"
       end
