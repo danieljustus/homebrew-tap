@@ -1,8 +1,6 @@
-# frozen_string_literal: true
-
 cask "symdesk-app" do
-  version "0.12.2"
-  sha256 "0ab8f6d8d5d9e3de4163f53314dd78ef5db96fa0a4feb76ef9da31a169ed5fb6"
+  version "0.13.2"
+  sha256 "7d60465340f61bcec5dbeb4ab6c19274057ec40088f1b6d0bda9fb2b5614ddea"
 
   url "https://github.com/danieljustus/symaira-desktop/releases/download/v#{version}/Symaira-Desktop-#{version}-macos.dmg"
   name "Symaira Desktop"
@@ -21,7 +19,7 @@ cask "symdesk-app" do
 
   zap trash: [
     "~/Library/Application Support/SymDesk",
-    "~/Library/Caches/com.symaira.desktop",
     "~/Library/Preferences/com.symaira.desktop.plist",
+    "~/Library/Caches/com.symaira.desktop",
   ]
 end
