@@ -1,6 +1,6 @@
 cask "symbrain" do
-  version "0.14.0"
-  sha256 "53bb983304cfd926ad88312e0030f1fd2598e6716e5902883bab99ac202452db"
+  version "0.15.0"
+  sha256 "c2bc69558fbbd36768504fcdb1cc37c6cd6dcec176b9d8e6623555f1e09742a7"
 
   url "https://github.com/danieljustus/symaira-brain/releases/download/v#{version}/Symaira-Brain-#{version}-macos.dmg"
   name "Symaira Brain"
