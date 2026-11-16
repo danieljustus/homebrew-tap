@@ -5,7 +5,6 @@
 class Symdesk < Formula
   desc "Local-first markdown vault workspace: CLI and MCP server"
   homepage "https://github.com/danieljustus/symaira-desktop"
-  version "0.13.2"
   license "Apache-2.0"
 
   on_macos do
