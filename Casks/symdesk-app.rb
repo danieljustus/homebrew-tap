@@ -1,6 +1,6 @@
 cask "symdesk-app" do
-  version "0.13.2"
-  sha256 "7d60465340f61bcec5dbeb4ab6c19274057ec40088f1b6d0bda9fb2b5614ddea"
+  version "0.13.3"
+  sha256 "379f5dcdc5d379ee0d346ccec45c12d2f8ad1d03cd921e0e7680255488583bf6"
 
   url "https://github.com/danieljustus/symaira-desktop/releases/download/v#{version}/Symaira-Desktop-#{version}-macos.dmg"
   name "Symaira Desktop"
