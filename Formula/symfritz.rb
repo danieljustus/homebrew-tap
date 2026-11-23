@@ -9,8 +9,8 @@ class Symfritz < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-fritz/releases/download/v0.11.2/symaira-fritz_0.11.2_darwin_arm64.tar.gz"
-      sha256 "7a671d4f0e9efe90965c4678c9db76339818998819726c1fa4f870872cd51aa9"
+      url "https://github.com/danieljustus/symaira-fritz/releases/download/v0.11.3/symaira-fritz_0.11.3_darwin_arm64.tar.gz"
+      sha256 "02de554bb49165206696958a9525e97d08222ecbfeddd9abb4b582e9ba3416cb"
 
       define_method(:install) do
         bin.install "symfritz"
@@ -20,16 +20,16 @@ class Symfritz < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-fritz/releases/download/v0.11.2/symaira-fritz_0.11.2_linux_amd64.tar.gz"
-      sha256 "1865b0616893fa4b543e6fe27ad6410843fab3ec53fe0042673d48a99e033835"
+      url "https://github.com/danieljustus/symaira-fritz/releases/download/v0.11.3/symaira-fritz_0.11.3_linux_amd64.tar.gz"
+      sha256 "a7011c0122014097ae8a12e27e4db2e1892ab6b5c049676e904d9ae8b5c5f9ef"
 
       define_method(:install) do
         bin.install "symfritz"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danieljustus/symaira-fritz/releases/download/v0.11.2/symaira-fritz_0.11.2_linux_arm64.tar.gz"
-      sha256 "e37b287520e8489d2e9d676fe7d9555a8a4221a1bb09ba7e982dafba06f1105b"
+      url "https://github.com/danieljustus/symaira-fritz/releases/download/v0.11.3/symaira-fritz_0.11.3_linux_arm64.tar.gz"
+      sha256 "da147765126cc0fb5f161649e14fe1431650101dcf3a495d79c340054b1773a2"
 
       define_method(:install) do
         bin.install "symfritz"
