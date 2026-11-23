@@ -4,14 +4,18 @@
 class Symcockpit < Formula
   desc "This machine: thermals, power, display and system tuning"
   homepage "https://github.com/danieljustus/symaira-cockpit"
-  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v0.12.2/symcockpit_0.12.2_darwin_universal.tar.gz"
-  sha256 "6ff72201a1ad4e42dd21931979c0eae4e510b612b0407dc2f242ebd1c0752473"
+  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v0.13.0/symcockpit_0.13.0_darwin_arm64.tar.gz"
+  sha256 "f42a8a2abba6662f77ef574d0b1764739df5455073488dc1c672c4cff44b969f"
   license "Apache-2.0"
 
-  # One universal binary rather than per-arch archives: symcockpit is
-  # macOS-only (AppKit/IOKit/Accessibility/ScreenCaptureKit), so there is no
-  # Linux leg to split on, and `swift build --arch arm64 --arch x86_64`
-  # produces a single artifact for both Macs.
+  # The command line only. The menu bar app and its Finder and Quick Look
+  # extensions come with the cask, which links this same binary. Homebrew has
+  # no way to declare that conflict (`conflicts_with cask:` in a formula is
+  # ignored and crashes `brew style`; a cask accepts only `cask:` keys), so a
+  # second install fails at the link step on the existing `symcockpit`.
+
+  # Apple Silicon only: Intel is not a supported platform.
+  depends_on arch: :arm64
   depends_on macos: :tahoe
 
   def install
@@ -20,14 +24,14 @@ class Symcockpit < Formula
 
   def caveats
     <<~EOS
-      symcockpit covers hardware and system tuning. Operate and Scope are
-      optional modules in Symaira Brain; legacy dispatcher commands are removed.
-      The menu bar app
-      is distributed separately: brew install --cask danieljustus/tap/symcockpit
+      This formula installs the command line only. The menu bar app is the
+      cask, which links the same `symcockpit` command, so install either one:
+        brew install --cask danieljustus/tap/symcockpit
+      Operate and Scope are optional modules in Symaira Brain.
     EOS
   end
 
   test do
-    assert_match "symcockpit #{version}", shell_output("#{bin}/symcockpit version")
+    assert_match "symcockpit #{version}", shell_output("#{bin}/symcockpit version --no-update-check")
   end
 end
