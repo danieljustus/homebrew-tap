@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 cask "symcockpit" do
-  version "0.13.1"
-  sha256 "e9c8830546ea19811ca5ba5885dd34bebcea60ad7d77d7d425ab7c07588aca7b"
+  version "0.13.2"
+  sha256 "3de6a3cfa92573789e11f80e49f88c62872209b62ee8a48d4817ce7bc59cfee9"
 
   url "https://github.com/danieljustus/symaira-cockpit/releases/download/v#{version}/Symaira-Cockpit-#{version}-macos.dmg"
   name "Symaira Cockpit"
