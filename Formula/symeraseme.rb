@@ -9,18 +9,18 @@ class Symeraseme < Formula
   on_macos do
     depends_on arch: :arm64
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-eraseme/releases/download/v0.17.1/symeraseme_0.17.1_darwin_arm64.tar.gz"
-      sha256 "65399da47b5cc45c885201ce083e69c60162d7570f160311c0da3e7f90294cbf"
+      url "https://github.com/danieljustus/symaira-eraseme/releases/download/v0.18.0/symeraseme_0.18.0_darwin_arm64.tar.gz"
+      sha256 "cef7e799a4ec5c3b12617c00181cd995638d7551a9c2851480b9807f8316ce5f"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/danieljustus/symaira-eraseme/releases/download/v0.17.1/symeraseme_0.17.1_linux_arm64.tar.gz"
-      sha256 "39658c12ff16121c75332e9c268535bb43616624ad0f206c399e196b06fdf6b1"
+      url "https://github.com/danieljustus/symaira-eraseme/releases/download/v0.18.0/symeraseme_0.18.0_linux_arm64.tar.gz"
+      sha256 "b5c7014fdcc89ebe1269da594502b340360a0352f4c3a3698920a1c211ee3bde"
     else
-      url "https://github.com/danieljustus/symaira-eraseme/releases/download/v0.17.1/symeraseme_0.17.1_linux_amd64.tar.gz"
-      sha256 "b89c7a3bc2cbd57c27d9a2f1d79eacb0df03c4da021bd404452bacd10537af28"
+      url "https://github.com/danieljustus/symaira-eraseme/releases/download/v0.18.0/symeraseme_0.18.0_linux_amd64.tar.gz"
+      sha256 "0ad5b52f60bee79aba369f752e491f910706c01007ddccd19511d44152873621"
     end
   end
 
