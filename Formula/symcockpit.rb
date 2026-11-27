@@ -4,8 +4,8 @@
 class Symcockpit < Formula
   desc "This machine: thermals, power, display and system tuning"
   homepage "https://github.com/danieljustus/symaira-cockpit"
-  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v0.13.1/symcockpit_0.13.1_darwin_arm64.tar.gz"
-  sha256 "8894c081614db9eb4158136f57ea4537d8b5eff761c8e5530e9b1c078e417723"
+  url "https://github.com/danieljustus/symaira-cockpit/releases/download/v0.13.2/symcockpit_0.13.2_darwin_arm64.tar.gz"
+  sha256 "3744f8b333eed32d7fb876c262f413eb1f166877575c2dbcac27bea203705048"
   license "Apache-2.0"
 
   # The command line only. The menu bar app and its Finder and Quick Look
